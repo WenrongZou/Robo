@@ -48,6 +48,10 @@ Statement (b : ℕ) (A : Finset ℕ): (∃ a ∈ A, b ∣ a) → b ∣ ∏ a ∈
   "
   -/
   Hint "Use `prod_insert` to actually extract the factot"
+
+  set_option trace.grind.ematch.instance true in
+  -- `grind1` can directly close the goal.
+
   rw [prod_insert]
   /-
   Hint (hidden := true) "

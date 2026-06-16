@@ -26,34 +26,36 @@ obtain h | h | h := lt_trichotomy x y
 TheoremDoc lt_trichotomy as "lt_trichotomy" in "≤"
 
 
-Statement lt_trichotomy: ∀ a b : ℝ, a < b ∨ a = b ∨ b < a := by
-  intro a b
-  /-
-  Hint (strict := true)"
-    **Du**:  Fallunterscheidung ??
+Statement lt_trichotomy : ∀ a b : ℝ, a < b ∨ a = b ∨ b < a := by
+  grind
 
-    **Robo**:  Ja, könntest du versuchen. Zum Beispiel erst `by_cases h_leq : {a} ≤ {b}` und dann `by_cases h_lt : {a} < {b}`.
-  "
-  -/
-  Hint (strict := true) "Try `by_cases h_leq : {a} ≤ {b}`, `by_cases h_lt : {a} < {b}`"
-  by_cases h_leq : a ≤ b
-  · by_cases h_lt : a < b
-    · left
-      assumption -- or linarith
-    · right
-      left
-      /-
-      Hint "
-        **Du**:  Und jetzt??
+  -- intro a b
+  -- /-
+  -- Hint (strict := true)"
+  --   **Du**:  Fallunterscheidung ??
 
-        **Lina** (*triumphal*): `linarith`!
-        "
-      -/
-      Hint "Now try `linarith`!"
-      linarith  -- WANT LINARITH in this exercise!
-  · right
-    right
-    linarith -- WANT LINARITH in this exercise!
+  --   **Robo**:  Ja, könntest du versuchen. Zum Beispiel erst `by_cases h_leq : {a} ≤ {b}` und dann `by_cases h_lt : {a} < {b}`.
+  -- "
+  -- -/
+  -- Hint (strict := true) "Try `by_cases h_leq : {a} ≤ {b}`, `by_cases h_lt : {a} < {b}`"
+  -- by_cases h_leq : a ≤ b
+  -- · by_cases h_lt : a < b
+  --   · left
+  --     assumption -- or linarith
+  --   · right
+  --     left
+  --     /-
+  --     Hint "
+  --       **Du**:  Und jetzt??
+
+  --       **Lina** (*triumphal*): `linarith`!
+  --       "
+  --     -/
+  --     Hint "Now try `linarith`!"
+  --     linarith  -- WANT LINARITH in this exercise!
+  -- · right
+  --   right
+  --   linarith -- WANT LINARITH in this exercise!
 
 NewTactic linarith
 

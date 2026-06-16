@@ -31,6 +31,9 @@ Statement : ∃! (p : ℕ), Nat.Prime p ∧ Even p := by
     Hint (hidden := true) "Remind former proof"
     rw [even_iff_two_dvd] at h
     rw [prime_def] at hp
+
+    /- Here: `grind1` directly closed the goal. -/
+
     obtain ⟨h2, hprime ⟩ := hp
     apply (hprime 2) at h
     obtain h | h:= h

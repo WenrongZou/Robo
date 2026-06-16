@@ -27,6 +27,9 @@ Statement (a p : ℕ) (hp : Prime p) (h : 2 ≤ a) (ha : a ∣ p) : a = p := by
     -- Das macht alles nur schwieriger.  Benutze lieber wie ich gesagt hatte `rw [prime_def] at hp`."
     Hint "Do not `unfold` `Prime`. Use `rw [prime_def] at hp`"
   rw [prime_def] at hp
+
+  /- Here: `grind1` directly closed the goal.  -/
+
   -- Hint "**Du**:  Aha.  Eine Primzahl ist also eine natürlich Zahl größergleich `2`, die nur durch
   -- `1` und sich selbst teilbar ist.  Das klingt vertraut."
   Hint "A prime number is a natural number greater or equal to `2`, which is only divisible by `1`

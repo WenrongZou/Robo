@@ -1,5 +1,5 @@
 import Game.Levels.Luna.L01_le_rfl
-import Game.Levels.Luna.L02_Omega
+import Game.Levels.Luna.L02_Grind
 import Game.Levels.Luna.L03_Linarith__lt_trichotomy
 import Game.Levels.Luna.L04_Omega2
 import Game.Levels.Luna.L05_Linarith2

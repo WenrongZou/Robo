@@ -337,6 +337,9 @@ Unlike `linarith`, it can also handle logical connections between (in)equations.
 -/
 TacticDoc omega
 
+/-- TODO. -/
+TacticDoc grind
+
 -- Dafür kann  `linarith` z.B. für `x y a b : ℕ` wie `ring` zeigen: `x * a + y * a = (x + y) * a` zeigen,
 -- siehe Prado level 2; `omega` kann das nicht.
 

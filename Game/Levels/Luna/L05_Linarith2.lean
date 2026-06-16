@@ -26,35 +26,37 @@ Statement (l m n x : ℝ) (h₁ : l ≤ m) (h₂ : m ≤ n) : l ≤ x ∧ x ≤ 
   -/
   Hint "`omega` and `linarith` alone don't help here. `linarith` will need some help. Try to untangle
   the implications via `intro`"
-  intro hn hx
-  /-
-  Hint "
-    **Robo**:  Und jetzt machst du die Annahme `{hx}` ein bisschen lesbarer.
-    Probier vielleicht einmal `push Not at {hx}`?
-  "
-  -/
-  Hint "Increase readability of `{hx}`. Try `push Not at {hx}`"
-  push Not at hx
-  /-
-  Hint "
-    **Robo**:  Mmm … `{hx} : m ≤ x → n < x` sieht immer noch suboptimal aus.
-    Aber wir wissen ja, was `→` bedeutet – probier mal ein `rw` mit `imp_iff_or_not`!
-  "
-  -/
-  Hint "We now have `{hx} : m ≤ x → n < x`. Knowing what `→` means, try `rw` with `imp_iff_or_not`"
-  --linarith (config := {splitNe := true, splitHypotheses := true}) -- fails
-  rw [imp_iff_or_not] at hx
-  /-
-  Hint "
-    **Robo**:  Okay.  Das ist besser. Und jetzt kannst du `{hx}` noch mit `obtain` in die
-    beiden Bestandteile aufspalten.
-  "
-  -/
-  Hint "Divide `{hx}` with `obtain`"
-  --linarith (config := {splitNe := true, splitHypotheses := true}) -- fails
-  obtain hx | hx := hx
-  · linarith
-  · linarith
+  grind
+
+  -- intro hn hx
+  -- /-
+  -- Hint "
+  --   **Robo**:  Und jetzt machst du die Annahme `{hx}` ein bisschen lesbarer.
+  --   Probier vielleicht einmal `push Not at {hx}`?
+  -- "
+  -- -/
+  -- Hint "Increase readability of `{hx}`. Try `push Not at {hx}`"
+  -- push Not at hx
+  -- /-
+  -- Hint "
+  --   **Robo**:  Mmm … `{hx} : m ≤ x → n < x` sieht immer noch suboptimal aus.
+  --   Aber wir wissen ja, was `→` bedeutet – probier mal ein `rw` mit `imp_iff_or_not`!
+  -- "
+  -- -/
+  -- Hint "We now have `{hx} : m ≤ x → n < x`. Knowing what `→` means, try `rw` with `imp_iff_or_not`"
+  -- --linarith (config := {splitNe := true, splitHypotheses := true}) -- fails
+  -- rw [imp_iff_or_not] at hx
+  -- /-
+  -- Hint "
+  --   **Robo**:  Okay.  Das ist besser. Und jetzt kannst du `{hx}` noch mit `obtain` in die
+  --   beiden Bestandteile aufspalten.
+  -- "
+  -- -/
+  -- Hint "Divide `{hx}` with `obtain`"
+  -- --linarith (config := {splitNe := true, splitHypotheses := true}) -- fails
+  -- obtain hx | hx := hx
+  -- · linarith
+  -- · linarith
 
 TheoremTab "Logic"
 

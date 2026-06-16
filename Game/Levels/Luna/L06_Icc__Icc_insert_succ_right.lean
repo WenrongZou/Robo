@@ -45,9 +45,11 @@ Statement {a b : ℤ} (h : a ≤ b + 1) :
   -/
   Hint "Try `simp` afterwards"
   simp
-  -- Hint "Ritha macht wieder irgendwelche Zeichen."
-  Hint "Ritha gives signs to try omega"
-  omega
+  grind
+
+  -- -- Hint "Ritha macht wieder irgendwelche Zeichen."
+  -- Hint "Ritha gives signs to try omega"
+  -- omega
 
 
 TheoremTab "≤"

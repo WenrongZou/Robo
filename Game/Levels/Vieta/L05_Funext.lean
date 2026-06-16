@@ -29,10 +29,14 @@ jedes Element den gleichen Wert haben …
 Mit `funext x` wählst du ein beliebiges `x` und änderst das Beweisziel von `f = g` zu `f x = g x`."
 -/
   Hint "Try `funext`. Explain `funext x` as taking arbitrary `x` and changing goal from `f = g` to `f x = g x`"
+  /- here we could use `grind -ext`. `grind -ext` will not closed the goal before `funext`. -/
+  -- Here: `grind` will not closed the goal. See `GameMeta/Tactics/Grind.lean`.
   funext x
-  -- Hint (hidden := true) "**Robo**: Zur Erinnerung, `ring` sieht durch lokale Definition hindurch."
-  Hint (hidden := true) "Remind: `ring` sees through local definitions"
-  ring
+  grind
+
+  -- -- Hint (hidden := true) "**Robo**: Zur Erinnerung, `ring` sieht durch lokale Definition hindurch."
+  -- Hint (hidden := true) "Remind: `ring` sees through local definitions"
+  -- ring
 
 OnlyTactic funext ring
 NewTactic funext

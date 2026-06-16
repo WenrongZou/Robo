@@ -31,6 +31,8 @@ der Eigenschaft, dass alle trinken, wenn sie trinkt.* Genauer gesagt: in jeder n
 -/
 Introduction "Intro Quantus L10"
 
+
+
 Statement {People : Type} [h_nonempty : Nonempty People] (isDrinking : People → Prop) :
     ∃ (x : People), isDrinking x → ∀ (y : People), isDrinking y := by
   /-
@@ -67,6 +69,13 @@ Statement {People : Type} [h_nonempty : Nonempty People] (isDrinking : People �
     assumption
   -- · Hint (hidden := true) "**Robo**: Du könntest hier mit `push Not at {h}` weitermachen."
   · Hint (hidden := true) "Continue with `push Not at {h}`"
+
+    grind -- our modified `grind` will not closed this goal but `grind1` will.
+
+    set_option trace.grind.ematch.instance true in
+    -- grind only [#ea99]
+    -- grind -splitIte -splitMatch
+
     push Not at h
     /-
     Hint (hidden := true) "**Du**: Also nach `{h}` existiert ja eine Person, die nicht trinkt. Könnte ich diese brauchen damit die Aussage trivialerweise wahr wird?

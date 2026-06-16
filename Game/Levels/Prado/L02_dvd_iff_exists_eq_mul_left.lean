@@ -63,6 +63,8 @@ Statement {a b c : ℕ} (h : a ∣ b) (g : a ∣ c) : a ∣ b + c := by
   use x + y
   -- Hint (hidden := true) "**Robo**: Mit ein bisschen umschreiben kann man sicher `ring` verwenden."
   Hint (hidden := true) "Rewrite so you can use `ring`"
+
+  -- `grind `
   rw [h, g]
   Branch
     linarith  -- works here, but omega does not!

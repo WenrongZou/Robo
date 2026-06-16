@@ -31,16 +31,18 @@ Statement (a c : ℝ) (h : a ≠ c): ∃ b : ℝ, a < b ∧ b < c ∨ c < b ∧ 
   ```
   "
   use (a + c) / 2
-  obtain h | h | h := lt_trichotomy a c
-  · left
-    constructor
-    linarith
-    linarith
-  · contradiction
-  · right
-    constructor
-    linarith
-    linarith
+  grind
+
+  -- obtain h | h | h := lt_trichotomy a c
+  -- · left
+  --   constructor
+  --   linarith
+  --   linarith
+  -- · contradiction
+  -- · right
+  --   constructor
+  --   linarith
+  --   linarith
 
 /-
 Conclusion "
