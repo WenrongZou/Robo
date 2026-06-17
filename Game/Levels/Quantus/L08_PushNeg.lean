@@ -42,6 +42,7 @@ Statement {X : Type} (P : X → Prop) :
   numbers. `{P} x` could be the expression: `x` is even. Or: `x` has seven prime factors. Or: `x` is
   a favorite number. In other words: `{P}` is a mapping that takes `x : {X}` and maps it onto an expression.
   Try `push Not`."
+  -- grind
   Branch
     constructor
     intro h

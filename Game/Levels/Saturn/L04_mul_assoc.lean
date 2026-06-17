@@ -12,8 +12,8 @@ namespace MvPolynomial
 
 Statement (a b c : MvPolynomial (Fin 4) ℕ ) : a * b * c = a * (b * c) := by
   -- Hint "**Robo** Hier könntest du `mul_assoc` verwenden.  Oder *wieder* `ring` …"
-  Hint "Try `mul_assoc` or again `ring`"
-  ring
+  Hint "Try `mul_assoc` or again `grind`"
+  grind
 
 /-
 Conclusion "
@@ -36,7 +36,7 @@ Conclusion "
 Conclusion "Conclusion Saturn L04: coefficients were in `ℕ`. Polynomes with coefficients in `ℕ`
 are not considered rings. `ring` does also work on half rings."
 
-NewTactic ring
+NewTactic grind
 
 /---/
 TheoremDoc mul_assoc as "mul_assoc" in "+ *"

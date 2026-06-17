@@ -2,7 +2,7 @@ import Game.Levels.Saturn.L01_Rewrite_equality
 import Game.Levels.Saturn.L02_Ring_add_pow_two
 import Game.Levels.Saturn.L03_mul_comm
 import Game.Levels.Saturn.L04_mul_assoc
-import Game.Levels.Saturn.L05_Ring
+import Game.Levels.Saturn.L05_Grind
 
 /-!
 The planet `Saturn` introduces the tactics `ring` and `rw`.

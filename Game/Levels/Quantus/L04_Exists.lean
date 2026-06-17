@@ -56,6 +56,7 @@ Statement Nat.even_square (n : ℕ) (h : Even n) : Even (n ^ 2) := by
   -/
   Hint "Explain definition of `Even {n}` by `r` using `r + r = {n}`. Look up definition by `unfold Even at *`.
   `decide` might be considered but `decide` does not work, because of `{n}` arbitrary."
+
   Branch
     unfold Even
     -- Hint "

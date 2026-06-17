@@ -17,8 +17,8 @@ Introduction "Intro Vieta L05"
 
 open Function
 
-Statement :
-    let f := fun (x : ℤ) ↦ x ^ 2;
+Statement {n : ℕ} (h : Even n) :
+    let f := fun (x : ℤ) ↦ x ^ n;
     let g := fun x ↦ f (-x);
     f = g := by
     /-
@@ -32,13 +32,15 @@ Mit `funext x` wählst du ein beliebiges `x` und änderst das Beweisziel von `f 
   /- here we could use `grind -ext`. `grind -ext` will not closed the goal before `funext`. -/
   -- Here: `grind` will not closed the goal. See `GameMeta/Tactics/Grind.lean`.
   funext x
-  grind
+  unfold g f
+  rw [Even.neg_pow]
+  assumption
 
   -- -- Hint (hidden := true) "**Robo**: Zur Erinnerung, `ring` sieht durch lokale Definition hindurch."
   -- Hint (hidden := true) "Remind: `ring` sees through local definitions"
   -- ring
 
-OnlyTactic funext ring
+OnlyTactic funext
 NewTactic funext
 TheoremTab "Function"
 

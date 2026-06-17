@@ -52,9 +52,9 @@ hatch. `grind?` is likewise left unrestricted (authoring tool).
 /- this version will not give the error message. -/
 macro_rules
   | `(tactic| grind)            => `(tactic| try grind -ext (ematch := 0))
-  | `(tactic| grind only)       => `(tactic| try grind -ext (ematch := 0) only )
-  | `(tactic| grind [$args,*])  => `(tactic| try grind -ext (ematch := 0) only [$args,*])
-  | `(tactic| grind only [$args,*])  => `(tactic| try grind -ext (ematch := 0) only [$args,*])
+  | `(tactic| grind only)       => `(tactic| try grind -ext only )
+  | `(tactic| grind [$args,*])  => `(tactic| try grind -ext only [$args,*])
+  | `(tactic| grind only [$args,*])  => `(tactic| try grind -ext only [$args,*])
 
 macro (name := gGrind) "grind1" : tactic =>
   `(tactic| grind -ext)

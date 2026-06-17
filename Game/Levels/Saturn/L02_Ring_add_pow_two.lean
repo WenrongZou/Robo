@@ -23,7 +23,7 @@ Statement (x y : ℚ) : (x + y) ^ 2 = x ^ 2 + 2 * x * y + y ^ 2 := by
   -/
   Hint "Explain misfit of `binomi`. Try `add_pow_two` via `rw [add_pow_two]`"
   Branch
-    ring
+    grind
   rw [add_pow_two]
 
 /-
@@ -34,7 +34,7 @@ Conclusion "
   "
 -/
 Conclusion "Conclusion Saturn L02: `ring` could have been used as well"
-NewTactic ring
+NewTactic grind
 
 /---/
 TheoremDoc add_pow_two as "add_pow_two" in "+ *"

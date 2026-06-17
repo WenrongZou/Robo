@@ -31,8 +31,6 @@ der Eigenschaft, dass alle trinken, wenn sie trinkt.* Genauer gesagt: in jeder n
 -/
 Introduction "Intro Quantus L10"
 
-
-
 Statement {People : Type} [h_nonempty : Nonempty People] (isDrinking : People → Prop) :
     ∃ (x : People), isDrinking x → ∀ (y : People), isDrinking y := by
   /-

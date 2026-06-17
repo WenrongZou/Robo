@@ -17,14 +17,14 @@ Statement : ∀ (x : ℕ), (Even x) → Odd (1 + x) := by
     Implikation mit `intro x` angehen."
   -/
   Hint "Explain `∀` i.e. `\\forall` and approch to prove `∀ x, …`  by `intro x`"
-  grind -- `grind` will not closed it but `grind1` will solve it
-  intro x h
-  unfold Even at h
-  unfold Odd
-  choose y hy using h
-  use y
-  rw [hy]
-  ring
+  grind
+  -- intro x h
+  -- unfold Even at h
+  -- unfold Odd
+  -- choose y hy using h
+  -- use y
+  -- rw [hy]
+  -- ring
 
 NewDefinition Forall
 

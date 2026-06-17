@@ -51,17 +51,17 @@ Statement  (n : ℕ) : ∑ i ∈ Icc (-n : ℤ) n, i = 0 := by
         Also, specify that equation is in `ℤ`. Try e.g. ``` have : -1 + (-d : ℤ)  = -d - 1 ```"
         · --have : (-1 : ℤ)  + -↑d  = -↑d - 1 := by
           have : -1 + (-d : ℤ)  = -d - 1 := by
-            ring
+            grind
           rw [this]
           rw [← insert_Icc_left_eq_Icc_sub_one]
           · rw [sum_insert]
             · rw [hd]
-              ring
+              grind
             · simp
           · --omega -- fails; omega appears to treat ↑d as a random integer rather than a natural number
-            linarith
+            grind
         · simp
-      · linarith
+      · grind
 
 TheoremTab "∑ Π"
 

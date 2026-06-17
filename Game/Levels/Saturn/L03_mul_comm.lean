@@ -29,7 +29,7 @@ Statement (P : MvPolynomial (Fin 2) ℚ) : (X 0) * P = P * (X 0) := by
   Hint "Explain `P`: `P` is a 'multivariate polynome' with variables indexed by `Fin 2` and
   coefficients in `ℚ`.
   Explain `Fin 2` as the set of elements $\\\{0,1\\}$ that lead to the variables `X 0` and `X 1`"
-  ring
+  grind
 
 /-
 Conclusion "
@@ -37,7 +37,7 @@ Conclusion "
 "
 -/
 Conclusion "Conclusion Saturn L03"
-NewTactic ring
+NewTactic grind
 
 /---/
 TheoremDoc mul_comm as "mul_comm" in "+ *"

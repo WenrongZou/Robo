@@ -12,8 +12,7 @@ Introduction ""
 namespace MvPolynomial
 Statement (A B :  MvPolynomial (Fin 4) ℝ) (hA : A = (X 0)*(X 3) - (X 1)*(X 2)) (hB : B = (X 0)*(X 2) + (X 1)*(X 3)) :
   ((X 0)^2 + (X 1)^2) * ((X 2)^2 + (X 3)^2) = A^2 + B^2  := by
-  rw [hA, hB]
-  ring
+  grind
 
 /-  older version:
      very artificial & more complicated
