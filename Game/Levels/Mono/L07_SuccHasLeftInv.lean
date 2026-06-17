@@ -21,6 +21,7 @@ Statement : HasLeftInverse succ  := by
 
   **Robo**:  Ja.  Das ist einfach wieder als `0` definiert.
   "
+
   -/
   Hint "It conjected that `n ↦ n + 1` has left inverse. One would assume that `n ↦ n - 1` would
   not work for `n = 0`. Tackling this by case distinction e.g. `if … then … else` is unecessary as

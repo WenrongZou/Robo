@@ -59,6 +59,7 @@ Statement  (n : ℕ) : ∑ i ∈ Icc (-n : ℤ) n, i = 0 := by
               ring
             · simp
           · --omega -- fails; omega appears to treat ↑d as a random integer rather than a natural number
+
             linarith
         · simp
       · linarith
