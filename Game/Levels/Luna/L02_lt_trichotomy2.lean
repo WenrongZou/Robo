@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Luna"
-Level 9
+Level 2
 
 Title ""
 
@@ -31,16 +31,7 @@ Statement (a c : ℝ) (h : a ≠ c): ∃ b : ℝ, a < b ∧ b < c ∨ c < b ∧ 
   ```
   "
   use (a + c) / 2
-  obtain h | h | h := lt_trichotomy a c
-  · left
-    constructor
-    linarith
-    linarith
-  · contradiction
-  · right
-    constructor
-    linarith
-    linarith
+  grind
 
 /-
 Conclusion "

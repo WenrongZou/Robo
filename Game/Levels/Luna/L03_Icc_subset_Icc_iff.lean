@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Luna"
-Level 10
+Level 3
 
 Title ""
 
@@ -35,24 +35,8 @@ a₁ ≤ b₁ →  (Icc a₁ b₁ ⊆ Icc a₂ b₂ ↔ a₂ ≤ a₁ ∧ b₁ �
   Hint "Try using `subset_iff` and if nothing else helps, `simp`"
   rw [subset_iff]
   simp
-  intro h₁
-  -- omega -- still fails here
-  constructor
-  · -- omega -- still fails here
-    intro h
-    /-
-    Hint (hidden := true) "
-      **Robo**:  Die Annahme `{h}` musst du sicherlich irgendwie ausnutzen.
-      Du könnest `{h}` zum Beispiel auf die Ungleichung `a₁ ≤ b₁` oder auf `a₁ ≤ a₁` anwenden!
-      (Die Ungleichung `a₁ ≤ a₁` formulierst du am besten mit `have` aus.)
-    "
-    -/
-    Hint (hidden := true) "Use assumption `{h}`. E.g. apply `{h}` onto `a₁ ≤ b₁` or `a₁ ≤ a₁`.
-    Formulate `a₁ ≤ a₁` using `have`"
-    apply h at h₁
-    have : a₁ ≤ a₁ := by rfl  -- briefly introduced in Implies, so that Luna does not depend on Spinoza
-    apply h at this
-    omega
-  · omega
+  grind
+
+NewTheorem Set.subset_iff
 
 Conclusion ""

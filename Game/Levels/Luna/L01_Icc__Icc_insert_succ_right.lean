@@ -3,7 +3,7 @@ import Game.Metadata
 open Nat
 
 World "Luna"
-Level 6
+Level 1
 
 Title ""
 
@@ -36,18 +36,9 @@ Statement {a b : ℤ} (h : a ≤ b + 1) :
   as $[a, b]$ or $\\\{a, a + 1, \\dots, b\\}$, because we are in the natual numbers. Therfore, the
   goal is: $$ [a, b] ∪ \\\{ b + 1 \\} = [a, b + 1] $$"
   -- Hint (hidden := true) "**Robo:** Gleichheit von Mengen ruft nach `ext`."
-  Hint "Equality of sets demands `ext`"
-  ext x
-  /-
-  Hint "
-    **Robo:**  Schieß mal gleich noch ein `simp` hinterher.
-  "
-  -/
-  Hint "Try `simp` afterwards"
-  simp
-  -- Hint "Ritha macht wieder irgendwelche Zeichen."
-  Hint "Ritha gives signs to try omega"
-  omega
+  Hint "Try `grind`"
+  grind
+
 
 
 TheoremTab "≤"
@@ -67,5 +58,7 @@ Finset.insert_Icc_add_one_left_eq_Icc
 Finset.insert_Icc_sub_one_right_eq_Icc
 
 NewDefinition Finset.Icc
+
+NewTactic grind
 
 Conclusion ""
