@@ -20,7 +20,8 @@ Overview of the `NewDefinition` declarations across the Piazza levels (ordered b
 
 ## Decisions
 - Delete L08, L09, L10
-- For L11 - L13, only keep L13.
+- For L11 - L13, only keep L13.-
+- Add Luna to the last three Level in Piazza, (introducing `grind`).
 
 ## Findings
 
