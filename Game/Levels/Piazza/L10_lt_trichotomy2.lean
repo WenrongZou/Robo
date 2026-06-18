@@ -1,7 +1,7 @@
 import Game.Metadata
 
-World "Luna"
-Level 2
+World "Piazza"
+Level 10
 
 Title ""
 

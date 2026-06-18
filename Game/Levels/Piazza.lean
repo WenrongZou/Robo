@@ -6,6 +6,9 @@ import Game.Levels.Piazza.L05_empty__eq_empty_iff_forall_notMem
 import Game.Levels.Piazza.L06_Ext2__univ2
 import Game.Levels.Piazza.L07_antisymm_iff
 import Game.Levels.Piazza.L08_insert_erase
+import Game.Levels.Piazza.L09_Icc__Icc_insert_succ_right
+import Game.Levels.Piazza.L10_lt_trichotomy2
+import Game.Levels.Piazza.L11_Icc_subset_Icc_iff
 
 World "Piazza"
 Title "Piazza"

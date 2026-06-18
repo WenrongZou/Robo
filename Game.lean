@@ -6,7 +6,6 @@ import Game.Levels.Quantus
 
 import Game.Levels.Saturn
 import Game.Levels.Spinoza
-import Game.Levels.Luna
 import Game.Levels.Babylon
 
 import Game.Levels.Cantor

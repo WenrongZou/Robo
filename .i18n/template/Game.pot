@@ -182,7 +182,7 @@ msgid "Rewrite §0 as sum of basis elements"
 msgstr ""
 
 #. §0: `omega`
-#: Game.Levels.Luna.L03_Icc_subset_Icc_iff
+#: Game.Levels.Piazza.L11_Icc_subset_Icc_iff
 msgid "Intro Luna L10: Use §0 again"
 msgstr ""
 
@@ -605,10 +605,6 @@ msgstr ""
 msgid "§0 is notation for 'there exists exactly one §1 for which §2 holds'.\n"
 "It is defined as 'There exists a §3 , s.t., §4 holds, and each other element §5, for which\n"
 "§6 holds, is equal to §7'. Try finding an appropriate §8 and apply §9"
-msgstr ""
-
-#: Game.Levels.Luna
-msgid "Luna"
 msgstr ""
 
 #. §0: `generalize`
@@ -1082,12 +1078,12 @@ msgid "Instead of §0, §1 can be used. After §2, you have to show how to\n"
 "prove goal by §3 before proving §4 itself."
 msgstr ""
 
-#: Game
-msgid "[Game] Info"
-msgstr ""
-
 #: Game.Levels.Iso.L02_Inverse
 msgid "Disect again"
+msgstr ""
+
+#: Game
+msgid "[Game] Info"
 msgstr ""
 
 #. §0: `f (E i i) = 1`
@@ -1448,7 +1444,7 @@ msgstr ""
 #. §2: $[a, b]$
 #. §3: $\\{a, a + 1, \\dots, b\\}$
 #. §4: $$ [a, b] ∪ \\{ b + 1 \\} = [a, b + 1] $$
-#: Game.Levels.Luna.L01_Icc__Icc_insert_succ_right
+#: Game.Levels.Piazza.L09_Icc__Icc_insert_succ_right
 msgid "Remind that §0 is an interval which is closed to both sides. You could write §1\n"
 "as §2 or §3, because we are in the natual numbers. Therfore, the\n"
 "goal is: §4"
@@ -1627,10 +1623,6 @@ msgstr ""
 #: Game.Levels.Mono.L05_StrictMono
 #: Game.Levels.Mono.L05_StrictMono
 msgid "Try again from the beginning"
-msgstr ""
-
-#: Game.Levels.Luna
-msgid "Intro Luna"
 msgstr ""
 
 #. §0: `∧`
@@ -2061,8 +2053,17 @@ msgstr ""
 msgid "Intro Logo L04"
 msgstr ""
 
-#: Game.Levels.Luna.L02_lt_trichotomy2
+#: Game.Levels.Piazza.L10_lt_trichotomy2
 msgid "Intro Luna L09"
+msgstr ""
+
+#. §0: `specialize «{hf}» «{s}»`
+#. §1: `simp`
+#. §2: `simp [«{s}»]`
+#. §3: `simp`
+#: Game.Levels.Cantor.L02_CantorPowerset
+msgid "Try §0. When you apply §1 later, §2 allows §3 to look through\n"
+"your defintions"
 msgstr ""
 
 #. §0: `contrapose`
@@ -2078,15 +2079,6 @@ msgid "The tactic §0 changes a proof goal of the form §1 to §2, thereby\n"
 "\n"
 "The tactic §3 can be useful for writing an assumption as an implication premise\n"
 "before you use §4."
-msgstr ""
-
-#. §0: `specialize «{hf}» «{s}»`
-#. §1: `simp`
-#. §2: `simp [«{s}»]`
-#. §3: `simp`
-#: Game.Levels.Cantor.L02_CantorPowerset
-msgid "Try §0. When you apply §1 later, §2 allows §3 to look through\n"
-"your defintions"
 msgstr ""
 
 #. §0: `E i j`
@@ -2441,7 +2433,7 @@ msgstr ""
 #. §3: ```
 #. obtain h | h | h := lt_trichotomy a c
 #. ```
-#: Game.Levels.Luna.L02_lt_trichotomy2
+#: Game.Levels.Piazza.L10_lt_trichotomy2
 msgid "It is clear which §0 can be used. Start with §1 and continue with §2 e.g.\n"
 "§3\n"
 ""
@@ -2633,6 +2625,12 @@ msgstr ""
 msgid "Conclusion Iso L02"
 msgstr ""
 
+#. §0: `simp`
+#: Game.Levels.Cantor.L03_IsFixedPt_abs
+#: Game.Levels.Cantor.L03_IsFixedPt_abs
+msgid "§0 can used always"
+msgstr ""
+
 #. §0: `f : A → B`
 #. §1: `preimage f : Set B → Set A`
 #. §2: `B`
@@ -2642,12 +2640,6 @@ msgstr ""
 msgid "For a mapping §0, §1\n"
 "is one of the induced mappings on the power sets –\n"
 "it maps a subset of §2 to the preimage §3 of this subset under §4."
-msgstr ""
-
-#. §0: `simp`
-#: Game.Levels.Cantor.L03_IsFixedPt_abs
-#: Game.Levels.Cantor.L03_IsFixedPt_abs
-msgid "§0 can used always"
 msgstr ""
 
 #. §0: `push Not at «{h}»`
@@ -4368,15 +4360,15 @@ msgid "Explain that §0 means §1 is a natural number. The notation §2 is not u
 "The proof goal is §9. Try §10"
 msgstr ""
 
-#: Game.Levels.Babylon.L10_Boss
-msgid "Intro Babylon L09"
-msgstr ""
-
 #. §0: `IsFixedPt`
 #. §1: `IsFixedPt f x`
 #. §2: `f x = x`
 #: Game.Levels.Cantor.L03_IsFixedPt_abs
 msgid "§0 means 'is fixed point'. §1 equates to §2"
+msgstr ""
+
+#: Game.Levels.Babylon.L10_Boss
+msgid "Intro Babylon L09"
 msgstr ""
 
 #: Game.Levels.Implis.L07_Symm
@@ -4959,10 +4951,10 @@ msgstr ""
 msgid "First, introduce set §0"
 msgstr ""
 
-#. §0: `grind`
-#: Game.Levels.Luna.L01_Icc__Icc_insert_succ_right
+#. §0: `simp [E]`
 #: Game.Levels.Robotswana.L09_EvalOnEBasis
 #: Game.Levels.Robotswana.L09_EvalOnEBasis
+#: Game.Levels.Piazza.L09_Icc__Icc_insert_succ_right
 msgid "Try §0"
 msgstr ""
 
@@ -5606,10 +5598,6 @@ msgstr ""
 msgid "Prove §0"
 msgstr ""
 
-#: Game.Levels.Luna.L02_lt_trichotomy2
-msgid "Conclusion Luna L09"
-msgstr ""
-
 #. §0: `obtain ⟨h₁, h₂⟩ := «{h}»`
 #. §1: `\\<`
 #. §2: `\\>`
@@ -5622,6 +5610,10 @@ msgstr ""
 msgid "Deconstruct assumption by §0. The brackets can be written seperatly\n"
 "as §1 and §2 or simultaneously as §3. The first assumption can be named §4. Other names\n"
 "than §5 und §6 can be chosen as well e.g. §7"
+msgstr ""
+
+#: Game.Levels.Piazza.L10_lt_trichotomy2
+msgid "Conclusion Luna L09"
 msgstr ""
 
 #. §0: `Even.neg_pow`
@@ -5798,7 +5790,7 @@ msgstr ""
 msgid "Conclusion Babylon L06"
 msgstr ""
 
-#: Game.Levels.Luna.L01_Icc__Icc_insert_succ_right
+#: Game.Levels.Piazza.L09_Icc__Icc_insert_succ_right
 msgid "Intro Luna L06"
 msgstr ""
 
@@ -5876,14 +5868,14 @@ msgstr ""
 msgid "Conclusion Mono L01"
 msgstr ""
 
-#. §0: `subset_iff`
-#. §1: `simp`
-#: Game.Levels.Luna.L03_Icc_subset_Icc_iff
-msgid "Try using §0 and if nothing else helps, §1"
-msgstr ""
-
 #: Game.Levels.Robotswana.L04_MatrixEqSum
 msgid "Conclusion Robotswana L04"
+msgstr ""
+
+#. §0: `subset_iff`
+#. §1: `simp`
+#: Game.Levels.Piazza.L11_Icc_subset_Icc_iff
+msgid "Try using §0 and if nothing else helps, §1"
 msgstr ""
 
 #. §0: `«{g}»`
