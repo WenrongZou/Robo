@@ -22,14 +22,14 @@ Statement {A B : Type} {f : A → B} (h : HasLeftInverse f) :
   Hint "Explain that a mapping, which is left inverse ..."
   intro a a' ha
   obtain ⟨g, hg⟩ := h
-  -- Hint "**Robo**:  Vielleicht irgendwas mit `congr_arg g`?"
-  Hint "Try using `congr_arg g`"
+  -- Hint "**Robo**:  Vielleicht irgendwas mit `congrArg g`?"
+  Hint "Try using `congrArg g`"
   Branch
     trans g (f a)
     · rw [hg]
     · rw [ha]
       rw [hg]
-  apply congr_arg g at ha
+  apply congrArg g at ha
   unfold LeftInverse at hg
   rw [hg a, hg a'] at ha
   assumption

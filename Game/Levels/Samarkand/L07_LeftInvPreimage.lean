@@ -30,7 +30,7 @@ Statement  {A B : Type} {f : A → B} {g : B → A}
       apply hx
     assumption
   unfold LeftInverse at hL
-  apply congr_arg g at e
+  apply congrArg g at e
   specialize hL x
   rw [← hL, e] at hx
   assumption

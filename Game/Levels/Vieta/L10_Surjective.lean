@@ -56,17 +56,18 @@ Statement {A : Type} {f : A → ℕ} (h : ∃ a : A, f a = 0) {g : A → A}
     use g b
     Branch
       rw [← hb]
-      apply congr_fun hs
+      apply congrFun hs
     /-
-    Hint (hidden := true) "**Robo**: Willst du vielleicht mit `congr_fun` die Annahme `{hs}`
+    Hint (hidden := true) "**Robo**: Willst du vielleicht mit `congrFun` die Annahme `{hs}`
     zu `∀ x, ({f} ∘ {g}) x = (succ ∘ {f})` umschreiben?"
     -/
-    Hint (hidden := true) "Try `congr_fun` to rewrite `{hs}` to `∀ x, ({f} ∘ {g}) x = (succ ∘ {f})`"
-    apply congr_fun at hs
-    specialize hs b
-    simp at hs
-    rw [hs]
-    rw [hb]
+    Hint (hidden := true) "Try `congrFun` to rewrite `{hs}` to `∀ x, ({f} ∘ {g}) x = (succ ∘ {f})`"
+    apply congrFun at hs
+    grind
+    -- specialize hs b
+    -- simp at hs
+    -- rw [hs]
+    -- rw [hb]
 
 /-
 Conclusion "

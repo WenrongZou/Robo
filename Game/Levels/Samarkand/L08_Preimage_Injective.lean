@@ -63,7 +63,7 @@ Statement preimage_injective {A B : Type} {f : A → B} : Injective (preimage f)
     simp
   · intro h_surj
     intro s s' hs
-    apply congr_arg (image f) at hs
+    apply congrArg (image f) at hs
     rw [Surjective.image_preimage h_surj] at hs
     rw [Surjective.image_preimage h_surj] at hs
     assumption

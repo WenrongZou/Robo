@@ -85,7 +85,7 @@ Statement injective_iff_hasLeftInverse {A B : Type} [hA : Nonempty A]  (f : A �
     intro hL
     intro a a' ha
     obtain ⟨g, hg⟩ := hL
-    apply congr_arg g at ha
+    apply congrArg g at ha
     unfold LeftInverse at hg
     rw [hg a, hg a'] at ha
     assumption

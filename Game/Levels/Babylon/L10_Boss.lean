@@ -1,9 +1,9 @@
 import Game.Metadata
 
-import Game.Levels.Babylon.L08_Induction3_sub_insert3
+import Game.Levels.Babylon.L09_Induction3_sub_insert3
 
 World "Babylon"
-Level 9
+Level 10
 Title ""
 
 /-
@@ -27,7 +27,9 @@ Statement (m : ℕ) : (∑ i ∈ Icc 0 m, (i : ℚ) ^3) = (∑ i ∈  Icc 0 m, i
   induction m with n n_ih
   · simp
   · rw [← insert_Icc_right_eq_Icc_add_one]
-    · rw [sum_insert]
+    ·
+      -- here we could use `grind [arithmetic_sum]`.
+      rw [sum_insert]
       · simp
         rw [n_ih]
         /-
@@ -37,10 +39,12 @@ Statement (m : ℕ) : (∑ i ∈ Icc 0 m, (i : ℚ) ^3) = (∑ i ∈  Icc 0 m, i
         -/
         Hint (hidden := true) "Use `arithmetic_sum` as its already proven"
         rw [arithmetic_sum]
-        simp
-        ring
+        grind
+
+        -- simp
+        -- ring
       · simp
-    · linarith
+    · grind
 
 TheoremTab "∑ Π"
 

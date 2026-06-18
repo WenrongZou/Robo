@@ -20,7 +20,7 @@ Statement Equiv.bijective {A B : Type} (f : A ≃ B) : Bijective f.toFun := by
   constructor
   · Branch
       intro a₁ a₂ h
-      simpa [congr_arg f.invFun] using h
+      simpa [congrArg f.invFun] using h
     apply Equiv.injective
   · apply RightInverse.surjective f.right_inv
 

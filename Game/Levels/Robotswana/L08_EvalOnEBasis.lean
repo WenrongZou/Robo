@@ -114,13 +114,13 @@ Statement Matrix.eq_sum_apply_diag_ebasis {n : ℕ} {f : Mat[n,n][ℝ] →ₗ[�
   -/
   Hint "Use disappearing `f` in `E i j` with `i≠j`. Try `trans ∑ i, ∑ j, if i = j then (A i j) * f (E i j) else 0`"
   trans ∑ i, ∑ j, if i = j then (A i j) * f (E i j) else 0
-  -- · Hint "**Robo**: Summe gleich Summe … das gehst du mit `apply congr_arg`, `ext` an."
-  · Hint "Try using `apply congr_arg` and `ext`"
-    apply congr_arg
+  -- · Hint "**Robo**: Summe gleich Summe … das gehst du mit `apply congrArg`, `ext` an."
+  · Hint "Try using `apply congrArg` and `ext`"
+    apply congrArg
     ext i
     -- Hint (hidden := true) "**Du**: Vielleicht gleich nocheinmal?"
     Hint (hidden := true) "Try again"
-    apply congr_arg
+    apply congrArg
     ext j
     -- Hint "**Du**: Und jetzt Fallunterscheidung zu `{i} = {j}`…"
     Hint "Prove by cases for `{i} = {j}`"

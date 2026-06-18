@@ -41,8 +41,9 @@ Statement {A : Type} (f : ℕ → A) :
   -/
   Hint (strict := true) "Insert `g` via `use`"
   use g
-  intro n
-  simp [g] -- TODO: There's a tiny bit magic in this step.
+  grind
+  -- intro n
+  -- simp [g] -- TODO: There's a tiny bit magic in this step.
 
 
 NewDefinition toNat

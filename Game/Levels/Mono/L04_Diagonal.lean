@@ -49,9 +49,9 @@ Statement {A : Type} (n : ℕ) :
   Branch
     simp [diag]
     intro a b h
-    -- Hint (hidden := true) "**Robo**:  Du könntest die Abbildungen in `{h}` auf einem Element aus `Fin (n + 1)` auswerten. Vielleicht hilft `congr_fun` in irgendeiner Form?"
-    Hint (hidden := true) "Evaluate mappings in `{h}` on element from `Fin (n + 1)`. `congr_fun` could help"
-    apply congr_fun at h
+    -- Hint (hidden := true) "**Robo**:  Du könntest die Abbildungen in `{h}` auf einem Element aus `Fin (n + 1)` auswerten. Vielleicht hilft `congrFun` in irgendeiner Form?"
+    Hint (hidden := true) "Evaluate mappings in `{h}` on element from `Fin (n + 1)`. `congrFun` could help"
+    apply congrFun at h
   --Branch
   --  apply HasLeftInverse.injective  -- not yet known!
   --  let p : (Fin (n + 1) → A) → A := fun v ↦ v (Fin.last n)
@@ -60,8 +60,8 @@ Statement {A : Type} (n : ℕ) :
   intro a₁ a₂ h
   /-
   Hint (hidden := true) "**Robo**:  Erinner dich, dass deine “Tupel” `diag {a₁}` und `diag {a₂}` in Wahrheit zwei Abbildung `Fin (n + 1) → A` sind.
-  Du könntest sie auf einem Element aus `Fin (n + 1)` auswerten. Vielleicht hilft `congr_fun` in irgendeiner Form?"
+  Du könntest sie auf einem Element aus `Fin (n + 1)` auswerten. Vielleicht hilft `congrFun` in irgendeiner Form?"
   -/
   Hint (hidden := true) "Remind that 'tuples' `diag {a₁}` and `diag {a₂}` are two mappings `Fin (n + 1) → A`.
-  Evaluate them on elements from `Fin (n + 1)`. Try `congr_fun`"
-  apply congr_fun h 0
+  Evaluate them on elements from `Fin (n + 1)`. Try `congrFun`"
+  apply congrFun h 0

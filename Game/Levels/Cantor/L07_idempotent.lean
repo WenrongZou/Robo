@@ -30,18 +30,18 @@ Statement {A : Type} (f : A → A) (h : f ∘ f = f) :
   Hint "
     **Robo**:  Fang am besten damit an, wieder alle Definition auszuschreiben.
     Ich würde sagen:  `unfold range fixedPoints IsFixedPt`.
-    Und die Annahme `{h}` könntest du schon einmal `congr_fun` genauer ausschreiben.
+    Und die Annahme `{h}` könntest du schon einmal `congrFun` genauer ausschreiben.
     "
   -/
-  Hint "Try `unfold range fixedPoints IsFixedPt` and rewrite assumption `{h}` firstly by `congr_fun`"
+  Hint "Try `unfold range fixedPoints IsFixedPt` and rewrite assumption `{h}` firstly by `congrFun`"
   unfold range fixedPoints IsFixedPt
   /-
   Hint (hidden := true) (strict := true) "
-    **Robo**:  Ich meinte `apply congr_fun at h`.
+    **Robo**:  Ich meinte `apply congrFun at h`.
   "
   -/
-  Hint "Specifically try `apply congr_fun at h`"
-  apply congr_fun at h
+  Hint "Specifically try `apply congrFun at h`"
+  apply congrFun at h
   /-
   Hint (hidden := true) (strict := true) "
     **Robo**:  Vielleicht fängst du mal wieder mit `ext` an.

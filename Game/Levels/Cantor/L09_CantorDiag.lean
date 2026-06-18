@@ -74,7 +74,7 @@ Statement cantor_diagonal {A Y : Type} (f : A → A → Y) (hf : Surjective f) :
   use (f a a)
   unfold fixedPoints IsFixedPt
   simp
-  apply congr_fun at ha
+  apply congrFun at ha
   specialize ha a
   --simp [c] at ha  -- optional
   symm

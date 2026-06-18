@@ -164,9 +164,9 @@ Statement Matrix.one_on_diag_ebasis {n : ℕ} {f : Mat[n, n][ℝ] →ₗ[ℝ] �
       Hint "Show statement via `{f} (∑ x, E x x)`"
       trans f (∑ x, E x x)
       · Branch
-          apply congr_arg
+          apply congrArg
           -- Hint "**Du**: Nein, das ist jetzt mathematisch falsch!"
-          Hint "[Robotswana.L09] Hint 1: `apply congr_arg` is mathematically wrong"
+          Hint "[Robotswana.L09] Hint 1: `apply congrArg` is mathematically wrong"
         /-
         Hint (hidden := true) "**Robo**: Jetzt wieder `congr`-`ext`?
 
@@ -177,7 +177,7 @@ Statement Matrix.one_on_diag_ebasis {n : ℕ} {f : Mat[n, n][ℝ] →ₗ[ℝ] �
         -- Hint "**Du**: Nochmals!"
         Hint "again"
         rw [map_sum]
-        apply congr_arg
+        apply congrArg
         ext j
         -- Hint "**Du**: Und das war ein Resultat, welches wir auf dem Weg gefunden haben."
         Hint "[Hint dkmw] Remind of previous result"
@@ -193,7 +193,7 @@ Statement Matrix.one_on_diag_ebasis {n : ℕ} {f : Mat[n, n][ℝ] →ₗ[ℝ] �
   · trans ∑ j : Fin n, f (E i i)
     · simp
     · trans ∑ j : Fin n, f (E j j )
-      · apply congr_arg
+      · apply congrArg
         ext
         -- Hint (hidden := true) "**Robo**: Das hatten wir schon gesehen."
         Hint (hidden := true) "[Hint ztqn] Remind of previous result"

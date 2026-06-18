@@ -1,8 +1,8 @@
 import Game.Metadata
-import Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
+import Game.Levels.Babylon.L07_Induction_sum_insert__arithmetic_sum
 
 World "Babylon"
-Level 7
+Level 8
 
 Title ""
 
@@ -58,10 +58,9 @@ Statement  (n : ℕ) : ∑ i ∈ Icc (-n : ℤ) n, i = 0 := by
             · rw [hd]
               ring
             · simp
-          · --omega -- fails; omega appears to treat ↑d as a random integer rather than a natural number
-            linarith
+          · grind
         · simp
-      · linarith
+      · grind
 
 TheoremTab "∑ Π"
 

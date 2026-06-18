@@ -1,8 +1,8 @@
 import Game.Metadata
-import Game.Levels.Babylon.L07_Induction2_sum_insert2
+import Game.Levels.Babylon.L08_Induction2_sum_insert2
 
 World "Babylon"
-Level 8
+Level 9
 
 open Finset
 
@@ -33,11 +33,14 @@ Statement (n : ℕ) : (∑ i ∈ Icc 0 n, (2 * i + 1)) = (n + 1)^ 2 := by
   induction n with d hd
   · simp
   · rw [← insert_Icc_right_eq_Icc_add_one]
-    · rw [sum_insert]
-      · rw [hd]
-        ring
-      · simp
-    · linarith
+    grind
+    · grind
+
+    -- · rw [sum_insert]
+    --   · rw [hd]
+    --     ring
+    --   · simp
+    -- · grind
 
 TheoremTab "∑ Π"
 

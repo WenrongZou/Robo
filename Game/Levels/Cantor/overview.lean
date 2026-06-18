@@ -17,7 +17,7 @@ example : ¬ ∃ (P : Prop),  IsFixedPt (¬ .) P := by
 
 example {A : Type} (f : A → A) (h : f ∘ f = f) :
     range f = fixedPoints f := by
-  apply congr_fun at h
+  apply congrFun at h
   rw [Subset.antisymm_iff]
   constructor
   · intro x hx
@@ -37,7 +37,7 @@ example {A Y : Type} {f : A → A → Y} {s : Y → Y}
      {a : A} (ha : f a = fun a' ↦ s (f a' a')) :
   IsFixedPt s (f a a) := by
   unfold IsFixedPt
-  apply congr_fun at ha
+  apply congrFun at ha
   specialize ha a
   rw [← ha]
 
@@ -52,7 +52,7 @@ theorem cantor_diagonal {A Y : Type} (f : A → A → Y) (hsurj : Surjective f) 
   -- from here, repeat **L08**
   unfold fixedPoints IsFixedPt
   simp
-  apply congr_fun at ha
+  apply congrFun at ha
   specialize ha a
   simp [c] at ha  -- optional
   symm

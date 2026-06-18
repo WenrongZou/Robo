@@ -76,7 +76,7 @@ Statement {A Y : Type} {f : A → A → Y} {s : Y → Y}
     simp
   Branch
     nth_rw 2 [ha]
-  apply congr_fun at ha
+  apply congrFun at ha
   specialize ha a
   rw [← ha]
 

@@ -17,8 +17,8 @@ Introduction "Intro Vieta L05"
 
 open Function
 
-Statement :
-    let f := fun (x : ℤ) ↦ x ^ 2;
+Statement {n : ℕ} :
+    let f := fun (x : ℤ) ↦ x ^ (2 * n);
     let g := fun x ↦ f (-x);
     f = g := by
     /-
@@ -28,11 +28,16 @@ jedes Element den gleichen Wert haben …
 **Robo**: Zu dem Prinzip hätte ich die Taktik `funext` auf Lager.
 Mit `funext x` wählst du ein beliebiges `x` und änderst das Beweisziel von `f = g` zu `f x = g x`."
 -/
+  /- In case `grind` will directly closed this goal. We use `x ^ (2 * n)` here. -/
   Hint "Try `funext`. Explain `funext x` as taking arbitrary `x` and changing goal from `f = g` to `f x = g x`"
   funext x
+  unfold g f
+  rw [Even.neg_pow]
+  Hint "try `grind`"
+  grind
   -- Hint (hidden := true) "**Robo**: Zur Erinnerung, `ring` sieht durch lokale Definition hindurch."
-  Hint (hidden := true) "Remind: `ring` sees through local definitions"
-  ring
+  -- Hint (hidden := true) "Remind: `ring` sees through local definitions"
+  -- ring
 
 OnlyTactic funext ring
 NewTactic funext

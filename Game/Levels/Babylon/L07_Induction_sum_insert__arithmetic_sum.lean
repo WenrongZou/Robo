@@ -2,7 +2,7 @@ import Game.Metadata
 
 
 World "Babylon"
-Level 6
+Level 7
 
 Title "" -- "Arithmetische Summe"
 
@@ -32,7 +32,7 @@ TheoremDoc arithmetic_sum as "arithmetic_sum" in "∑ Π"
 -- but cannot get initial conversion to ℚ to work!
 
 Statement arithmetic_sum (n : ℕ) :
-     (∑ i ∈ Icc 0 n , i : ℚ) = 1/2  * n * (n + 1) := by
+     (∑ i ∈ Icc 0 n , i : ℚ) = 1/2 * n * (n + 1) := by
   /-
   Hint "**Du**: Diese Summe habe ich auch schon einmal gesehen.
     $$
@@ -67,35 +67,40 @@ Statement arithmetic_sum (n : ℕ) :
   -/
   Hint "Divide interval $[0, {d}+1]$ into $[0,{d}]$ and ${d}+1$ by using `insert_Icc_right_eq_Icc_add_one`"
   rw [← insert_Icc_right_eq_Icc_add_one]
+  /- Here we could directly use `grind`. -/
+  grind
+  · grind
   /-
   Hint "**Robo**:  Genau!  Und jetzt spaltet dir `sum_insert` die Summe genau so auf, wie du das haben möchtest:
   also eine Summe über $[0,{d}]$ und dann noch einen zusätzlichen Summanden für ${d}+1$.
   Probiers mal: `rw [sum_insert]`
   "
   -/
-  Hint "`sum_insert` will divide sum as wished: a sum over $[0,{d}]$ and an additional summand for ${d}+1$.
-  Try `rw [sum_insert]`"
-  rw [sum_insert]
-  /-
-  Hint (hidden := true)
-  "**Du**: Und wie wende ich jetzt die Induktionshypothese an?
+  -- Hint "`sum_insert` will divide sum as wished: a sum over $[0,{d}]$ and an additional summand for ${d}+1$.
+  -- Try `rw [sum_insert]`"
 
-  **Robo**: Mit `rw`, wie jede andere Annahme auch."
-  -/
-  Hint (hidden := true) "Apply induction hypothesis with `rw`"
-  rw [hd]
-  /-
-  Hint "
-    **Du**: Der Rest sollte jetzt einfach nur Rechnerei sein.
+  -- rw [sum_insert]
 
-    **Robo**:  Stimmt.  Irgendeine Kombination von `simp` und `ring` sollte das schaffen.
-  "
-  -/
-  Hint "The rest is simple computation solvable by `simp` and `ring`"
-  simp
-  ring
-  simp
-  linarith
+  -- /-
+  -- Hint (hidden := true)
+  -- "**Du**: Und wie wende ich jetzt die Induktionshypothese an?
+
+  -- **Robo**: Mit `rw`, wie jede andere Annahme auch."
+  -- -/
+  -- Hint (hidden := true) "Apply induction hypothesis with `rw`"
+  -- rw [hd]
+  -- /-
+  -- Hint "
+  --   **Du**: Der Rest sollte jetzt einfach nur Rechnerei sein.
+
+  --   **Robo**:  Stimmt.  Irgendeine Kombination von `simp` und `ring` sollte das schaffen.
+  -- "
+  -- -/
+  -- Hint "The rest is simple computation solvable by `simp` and `ring`"
+  -- simp
+  -- ring
+  -- simp
+  -- grind
 
 NewTactic induction
 
