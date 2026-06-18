@@ -92,6 +92,15 @@ Statement Matrix.ebasis_diag_sum_eq_one {n : ℕ} : ∑ i : Fin n, E i i = 1 := 
   Kannst du zuerst mal `have h : \{{i}} ⊆ univ` zeigen?"
   -/
   Hint "Explain `1` and values of `1 {i} j` for all `j ≠ {i}` i.e. `j = {i}`. Try `have h : \{{i}} ⊆ univ`"
+  rw [sum_eq_single i]
+  simp
+  · intro b hb1 hb2
+    rw [one_apply, if_neg hb2.symm]
+    simp
+  Hint (hidden := true) "Robo: try `grind`."
+  grind
+
+  /- `Original proof` using `sum_subset`:
   have h : {i} ⊆ univ
   · simp
   -- Hint "**Robo**: Sehr gut.  Jetzt kannst du nämlich `sum_subset` anwenden."
@@ -149,6 +158,7 @@ Statement Matrix.ebasis_diag_sum_eq_one {n : ℕ} : ∑ i : Fin n, E i i = 1 := 
     Hint "Try `rw` and `if_neg`"
     rw [if_neg h₃]
     simp
+    -/
 
 /---/
 TheoremDoc Matrix.one_apply as "one_apply" in "Matrix"

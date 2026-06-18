@@ -47,6 +47,7 @@ CoverImage "images/Cover.png"
 Dependency Quantus → Piazza -- because of `∀`
 Dependency Prado → Mono     -- beclause of `∃!`
 Dependency Mono → Iso       -- because of `Injective`
+Dependency Prado → Vieta
 
 Dependency Robotswana → Ciao
 Dependency Cantor → Ciao
