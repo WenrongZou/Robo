@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-17\n"
+"POT-Creation-Date: 2026-06-18\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: template\n"
@@ -12,7 +12,7 @@ msgstr "Project-Id-Version: Game v4.29.1\n"
 msgid "Intro Samarkand L02"
 msgstr ""
 
-#. §0: `apply congr_fun at h`
+#. §0: `apply congrFun at h`
 #. §1: `rw [← comp_apply (f:= f)]`
 #. §2: `rw [← comp_apply]`
 #. §3: `(f:=f)`
@@ -30,7 +30,7 @@ msgstr ""
 
 #. §0: `«{h}»`
 #. §1: `Fin (n + 1)`
-#. §2: `congr_fun`
+#. §2: `congrFun`
 #: Game.Levels.Mono.L04_Diagonal
 msgid "Evaluate mappings in §0 on element from §1. §2 could help"
 msgstr ""
@@ -113,10 +113,10 @@ msgstr ""
 msgid "Intro Babylon L04"
 msgstr ""
 
-#. §0: `congr_arg`
+#. §0: `congrArg`
 #. §1: `x = y`
 #. §2: `f x = f y`
-#. §3: `apply congr_arg`
+#. §3: `apply congrArg`
 #: Game.Levels.Vieta.L08_CongrArg
 msgid "Try §0. If §1, then §2 when using §3"
 msgstr ""
@@ -303,6 +303,11 @@ msgstr ""
 msgid "Intro Vieta L01"
 msgstr ""
 
+#. §0: `grind`
+#: Game.Levels.Vieta.L05_Funext
+msgid "try §0"
+msgstr ""
+
 #: Game.Levels.Piazza
 msgid "Intro Piazza"
 msgstr ""
@@ -386,12 +391,6 @@ msgid "With §0, you introduce an intermediate result.\n"
 "## Friends and relatives\n"
 "§1 works in exactly the same way, except that you can continue with the main proof first and\n"
 "only have to prove your intermediate result at the very end."
-msgstr ""
-
-#. §0: `1 «{i}» «{i}»`
-#. §1: `1 • _`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Explain simplification of §0 and §1"
 msgstr ""
 
 #. §0: `(«{A}» ∧ «{B}») ∨ «{A}»`
@@ -555,7 +554,7 @@ msgid "The tactic §0 performs an inductive proof over §1.\n"
 msgstr ""
 
 #. §0: `arithmetic_sum`
-#: Game.Levels.Babylon.L09_Boss
+#: Game.Levels.Babylon.L10_Boss
 msgid "Use §0 as its already proven"
 msgstr ""
 
@@ -606,15 +605,6 @@ msgstr ""
 msgid "§0 is notation for 'there exists exactly one §1 for which §2 holds'.\n"
 "It is defined as 'There exists a §3 , s.t., §4 holds, and each other element §5, for which\n"
 "§6 holds, is equal to §7'. Try finding an appropriate §8 and apply §9"
-msgstr ""
-
-#. §0: `sum_insert`
-#. §1: $[0,«{d}»]$
-#. §2: $«{d}»+1$
-#. §3: `rw [sum_insert]`
-#: Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
-msgid "§0 will divide sum as wished: a sum over §1 and an additional summand for §2.\n"
-"Try §3"
 msgstr ""
 
 #: Game.Levels.Luna
@@ -719,7 +709,7 @@ msgid "Explain §0: §1 looks for known equations and equivalences which would b
 ""
 msgstr ""
 
-#: Game.Levels.Babylon.L08_Induction3_sub_insert3
+#: Game.Levels.Babylon.L09_Induction3_sub_insert3
 msgid "Intro Babylon L08"
 msgstr ""
 
@@ -764,6 +754,13 @@ msgstr ""
 #. §2: `choose g hg using nonempty_fibre`
 #: Game.Levels.Epo.L06_choose
 msgid "Remember §0. This here is a good setting for §1. Try §2"
+msgstr ""
+
+#. §0: `b ≠ k`
+#. §1: `intro b _ hbk`
+#. §2: `simp [hbk]`
+#: Game.Levels.Babylon.L06_sum_eq_single
+msgid "Here §0, so the condition is false. Try §1 and then §2"
 msgstr ""
 
 #: Game.Levels.Ciao.L01
@@ -1279,17 +1276,12 @@ msgid "The §0 tactic attempts to apply a large number of lemmas to simplify a g
 msgstr ""
 
 #. §0: $$ \\sum_{i = 0}^n (2i + 1) = n^2 $$
-#: Game.Levels.Babylon.L08_Induction3_sub_insert3
+#: Game.Levels.Babylon.L09_Induction3_sub_insert3
 msgid "Try solving §0 by induction"
 msgstr ""
 
 #: Game.Levels.Piazza.L05_empty__eq_empty_iff_forall_notMem
 msgid "Intro Piazza L05"
-msgstr ""
-
-#. §0: `simp`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "§0 is always available"
 msgstr ""
 
 #: Game.Levels.Saturn.L04_mul_assoc
@@ -1313,7 +1305,7 @@ msgid "The goal is that each self mapping §0 possess a fixed point.\n"
 "a single element then there should be a fixed-point-free self mapping."
 msgstr ""
 
-#. §0: `apply congr_arg`
+#. §0: `apply congrArg`
 #: Game.Levels.Robotswana.L09_EvalOnEBasis
 msgid "[Robotswana.L09] Hint 1: §0 is mathematically wrong"
 msgstr ""
@@ -1371,7 +1363,7 @@ msgstr ""
 msgid "§0 should help"
 msgstr ""
 
-#. §0: `linarith`
+#. §0: `grind`
 #. §1: `«{a}» = 1`
 #. §2: `2 ≤ «{a}»`
 #: Game.Levels.Prado.L06_Prime_Specialize__prime_def
@@ -1690,7 +1682,7 @@ msgid "Try §0 with §1"
 msgstr ""
 
 #. §0: `simp`
-#. §1: `omega`
+#. §1: `grind`
 #: Game.Levels.Babylon.L04_sum_subset
 msgid "Try §0 & §1"
 msgstr ""
@@ -1699,9 +1691,9 @@ msgstr ""
 msgid "Intro Piazza L02"
 msgstr ""
 
-#. §0: `congr_fun`
+#. §0: `congrFun`
 #. §1: `h : f = g`
-#. §2: `apply congr_fun at h`
+#. §2: `apply congrFun at h`
 #. §3: `h : ∀ x, f x = g x`
 #. §4: `rw [h]`
 #. §5: `f`
@@ -1786,7 +1778,8 @@ msgid "Intro Cantor L10: Show that there are no surjective mappings §0 by inter
 "§1 as §2. Sub set §3 can be seen as §4, which casts §5 on statement §6"
 msgstr ""
 
-#: Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
+#: Game.Levels.Babylon.L06_sum_eq_single
+#: Game.Levels.Babylon.L07_Induction_sum_insert__arithmetic_sum
 msgid "Intro Babylon L06"
 msgstr ""
 
@@ -1909,7 +1902,7 @@ msgstr ""
 
 #. §0: `unfold range fixedPoints IsFixedPt`
 #. §1: `«{h}»`
-#. §2: `congr_fun`
+#. §2: `congrFun`
 #: Game.Levels.Cantor.L07_idempotent
 msgid "Try §0 and rewrite assumption §1 firstly by §2"
 msgstr ""
@@ -1939,11 +1932,6 @@ msgstr ""
 
 #: Game.Levels.Logo.L09_Contradiction
 msgid "Intro Logo L09"
-msgstr ""
-
-#. §0: `«{h₂}»`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Try to simplify §0."
 msgstr ""
 
 #: Game.Levels.Implis.L10_Iff
@@ -2077,15 +2065,6 @@ msgstr ""
 msgid "Intro Luna L09"
 msgstr ""
 
-#. §0: `specialize «{hf}» «{s}»`
-#. §1: `simp`
-#. §2: `simp [«{s}»]`
-#. §3: `simp`
-#: Game.Levels.Cantor.L02_CantorPowerset
-msgid "Try §0. When you apply §1 later, §2 allows §3 to look through\n"
-"your defintions"
-msgstr ""
-
 #. §0: `contrapose`
 #. §1: `A → B`
 #. §2: `¬B → ¬A`
@@ -2099,6 +2078,15 @@ msgid "The tactic §0 changes a proof goal of the form §1 to §2, thereby\n"
 "\n"
 "The tactic §3 can be useful for writing an assumption as an implication premise\n"
 "before you use §4."
+msgstr ""
+
+#. §0: `specialize «{hf}» «{s}»`
+#. §1: `simp`
+#. §2: `simp [«{s}»]`
+#. §3: `simp`
+#: Game.Levels.Cantor.L02_CantorPowerset
+msgid "Try §0. When you apply §1 later, §2 allows §3 to look through\n"
+"your defintions"
 msgstr ""
 
 #. §0: `E i j`
@@ -2139,7 +2127,7 @@ msgstr ""
 #. §2: `have`
 #. §3: `ℤ`
 #. §4: ``` have : -1 + (-d : ℤ)  = -d - 1 ```
-#: Game.Levels.Babylon.L07_Induction2_sum_insert2
+#: Game.Levels.Babylon.L08_Induction2_sum_insert2
 msgid "Rewrite §0 to §1. Formulate equation using §2.\n"
 "Also, specify that equation is in §3. Try e.g. §4"
 msgstr ""
@@ -2170,7 +2158,7 @@ msgstr ""
 msgid "Explain inclusion. Try §0"
 msgstr ""
 
-#: Game.Levels.Babylon.L09_Boss
+#: Game.Levels.Babylon.L10_Boss
 msgid "this should work"
 msgstr ""
 
@@ -2250,12 +2238,7 @@ msgid "Try §0 with a number and then §1. You can not use §2\n"
 "directly, as §3 cannot be applied inside of quantors. Try §4 with a number."
 msgstr ""
 
-#. §0: `symm`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Try §0 to fix skewed order"
-msgstr ""
-
-#. §0: `apply congr_arg`
+#. §0: `apply congrArg`
 #. §1: `ext`
 #: Game.Levels.Robotswana.L08_EvalOnEBasis
 msgid "Try using §0 and §1"
@@ -2321,7 +2304,7 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `congr_arg g`
+#. §0: `congrArg g`
 #: Game.Levels.Mono.L09_InjOfHasLeftInv
 msgid "Try using §0"
 msgstr ""
@@ -2772,7 +2755,7 @@ msgid "Explain statement: given §0 for subset §1 of §2\n"
 ""
 msgstr ""
 
-#. §0: `apply congr_fun at h`
+#. §0: `apply congrFun at h`
 #: Game.Levels.Cantor.L07_idempotent
 msgid "Specifically try §0"
 msgstr ""
@@ -2855,7 +2838,7 @@ msgid "Use §0 and the lemma §1.\n"
 "For the latter, given §2 it concludes from the assumption §3 that §4"
 msgstr ""
 
-#. §0: `congr_fun`
+#. §0: `congrFun`
 #. §1: `«{hs}»`
 #. §2: `∀ x, («{f}» ∘ «{g}») x = (succ ∘ «{f}»)`
 #: Game.Levels.Vieta.L10_Surjective
@@ -2918,6 +2901,15 @@ msgstr ""
 #. §1: `succ`
 #: Game.Levels.Cantor.L11_SequenceUncountable
 msgid "The name of mapping §0 is §1"
+msgstr ""
+
+#. §0: `i = «{k}»`
+#. §1: `sum_eq_single`
+#. §2: `«{k}»`
+#. §3: `rw [sum_eq_single «{k}»]`
+#: Game.Levels.Babylon.L06_sum_eq_single
+msgid "Every term vanishes except the one at §0. Use §1: if §2 is the only index\n"
+"where the term does not vanish, the whole sum equals the term there. Try §3"
 msgstr ""
 
 #: Game.Levels.Samarkand.L07_LeftInvPreimage
@@ -3017,7 +3009,7 @@ msgid "Conclusion Iso L01"
 msgstr ""
 
 #. §0: `simp`
-#: Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
+#: Game.Levels.Babylon.L07_Induction_sum_insert__arithmetic_sum
 msgid "You can skip induction start by using §0"
 msgstr ""
 
@@ -3042,7 +3034,7 @@ msgstr ""
 
 #. §0: `constructor`
 #. §1: `comp_apply`
-#. §2: `congr_fun`
+#. §2: `congrFun`
 #: Game.Levels.Epo.L04_RightInverse
 msgid "Try §0, §1 | §2"
 msgstr ""
@@ -3130,6 +3122,11 @@ msgstr ""
 msgid "§0 is in 'type', whcih can be interpreted as §1 being a set which is by assumption §2\n"
 "not empty. The goal is to show that there is an element in §3. Use §4 to disect assumption.\n"
 "Try §5."
+msgstr ""
+
+#. §0: `Odd.neg_pow`
+#: Game.Levels.Mono.L02_InjectiveNeIff
+msgid "**Robo**: use §0?"
 msgstr ""
 
 #. §0: `intro`
@@ -3272,14 +3269,6 @@ msgid "For a predicate §0, §1 is the subset\n"
 "§2\n"
 "is the set of even natural numbers.\n"
 "You can simplify the statement §3, using §4, to §5 ."
-msgstr ""
-
-#. §0: `1 «{i}» «{x}»`
-#. §1: `if «{i}» = «{x}» then _ else _`
-#. §2: `«{i}» = «{x}»`
-#. §3: `«{i}» ≠ «{x}»`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Explain that §0 is defined as §1 and that either §2 or §3 is needed"
 msgstr ""
 
 #. §0: `x : ℝ`
@@ -3437,7 +3426,7 @@ msgid "For §0, §1 means that §2 is a prime number.\n"
 msgstr ""
 
 #. §0: `rw [sum_insert]`
-#: Game.Levels.Babylon.L07_Induction2_sum_insert2
+#: Game.Levels.Babylon.L08_Induction2_sum_insert2
 msgid "And yet again §0"
 msgstr ""
 
@@ -3589,13 +3578,14 @@ msgstr ""
 msgid "Intro Iso"
 msgstr ""
 
-#. §0: `sum_subset`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Now §0 can be applied"
-msgstr ""
-
 #: Game.Levels.Euklid
 msgid "Euklid"
+msgstr ""
+
+#. §0: `if k = k`
+#. §1: `simp`
+#: Game.Levels.Babylon.L06_sum_eq_single
+msgid "§0 is true, so §1 closes this"
 msgstr ""
 
 #: Game.Levels.Babylon.L03_sum_congr
@@ -3893,7 +3883,7 @@ msgstr ""
 #. §1: `diag «{a₂}»`
 #. §2: `Fin (n + 1) → A`
 #. §3: `Fin (n + 1)`
-#. §4: `congr_fun`
+#. §4: `congrFun`
 #: Game.Levels.Mono.L04_Diagonal
 msgid "Remind that 'tuples' §0 and §1 are two mappings §2.\n"
 "Evaluate them on elements from §3. Try §4"
@@ -3919,6 +3909,11 @@ msgstr ""
 #. §1: `nth_rw`
 #: Game.Levels.Robotswana.L08_EvalOnEBasis
 msgid "§0 is a bad idea here. Try §1."
+msgstr ""
+
+#. §0: `grind`
+#: Game.Levels.Robotswana.L05_EBasisDiagSum
+msgid "Robo: try §0."
 msgstr ""
 
 #. §0: `decide`
@@ -4058,7 +4053,7 @@ msgid "before using §0, use §1 to replace §2 by §3, because\n"
 "§4 does not know otherwise."
 msgstr ""
 
-#: Game.Levels.Babylon.L08_Induction3_sub_insert3
+#: Game.Levels.Babylon.L09_Induction3_sub_insert3
 msgid "Conclusion Babylon L08"
 msgstr ""
 
@@ -4231,7 +4226,7 @@ msgstr ""
 #. §0: $\\sum_{i=-n}^«{n}» i = 0$
 #. §1: `insert_Icc_right_eq_Icc_add_one`
 #. §2: `insert_Icc_left_eq_Icc_sub_one`
-#: Game.Levels.Babylon.L07_Induction2_sum_insert2
+#: Game.Levels.Babylon.L08_Induction2_sum_insert2
 msgid "Prove §0 by using §1, §2"
 msgstr ""
 
@@ -4373,7 +4368,7 @@ msgid "Explain that §0 means §1 is a natural number. The notation §2 is not u
 "The proof goal is §9. Try §10"
 msgstr ""
 
-#: Game.Levels.Babylon.L09_Boss
+#: Game.Levels.Babylon.L10_Boss
 msgid "Intro Babylon L09"
 msgstr ""
 
@@ -4571,11 +4566,6 @@ msgid "§0 is Leanic for §1. §2 consists of two parts. It is defined as §3.\n
 "It is a similar defintion to §4. Start with §5"
 msgstr ""
 
-#. §0: `rw`
-#: Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
-msgid "Apply induction hypothesis with §0"
-msgstr ""
-
 #. §0: `apply`
 #: Game.Levels.Mono.L05_StrictMono
 msgid "§0 is what is looked for"
@@ -4656,11 +4646,6 @@ msgstr ""
 msgid "Use §0 to look into definition of §1"
 msgstr ""
 
-#. §0: `ring`
-#: Game.Levels.Vieta.L05_Funext
-msgid "Remind: §0 sees through local definitions"
-msgstr ""
-
 #: Game.Levels.Euklid.L03_Finite_toFinset__prod_insert2
 msgid "Try constructor"
 msgstr ""
@@ -4673,13 +4658,6 @@ msgstr ""
 #: Game.Levels.Robotswana.L05_EBasisDiagSum
 msgid "Try §0 on §1 with §2 to §3e§4rite\n"
 "goal."
-msgstr ""
-
-#. §0: `«{h₂}»`
-#. §1: `«{i}» ≠ «{x}»`
-#. §2: `have h₃ : «{i}» ≠ «{x}»`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Explain that §0 states §1. Try §2"
 msgstr ""
 
 #. §0: `suffices h : P`
@@ -4717,6 +4695,15 @@ msgstr ""
 #: Game.Doc.Definition
 msgid "For a mapping §0, §1 is the set of fixed points of §2.\n"
 "Look up definition with §3."
+msgstr ""
+
+#. §0: `k ∉ range n`
+#. §1: `k < n`
+#. §2: `intro h`
+#. §3: `simp [mem_range] at h`
+#. §4: `omega`
+#: Game.Levels.Babylon.L06_sum_eq_single
+msgid "§0 contradicts §1. Try §2, §3 and §4"
 msgstr ""
 
 #. §0: `Even «{n}»`
@@ -4894,12 +4881,6 @@ msgstr ""
 msgid "A lemma like §0 that contains §1 or §2 in its statements can also be used with §3: §4"
 msgstr ""
 
-#. §0: `rw`
-#. §1: `if_neg`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Try §0 and §1"
-msgstr ""
-
 #. §0: `tauto`
 #: Game.Levels.Logo.L01_Tauto
 msgid "Conclusion Logo L01: Remind that §0 cannot be used"
@@ -4909,7 +4890,7 @@ msgstr ""
 msgid "The next part is elementary"
 msgstr ""
 
-#: Game.Levels.Babylon.L07_Induction2_sum_insert2
+#: Game.Levels.Babylon.L08_Induction2_sum_insert2
 msgid "Intro Babylon L07"
 msgstr ""
 
@@ -4927,7 +4908,7 @@ msgstr ""
 #. §1: $[0,«{d}»]$
 #. §2: $«{d}»+1$
 #. §3: `insert_Icc_right_eq_Icc_add_one`
-#: Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
+#: Game.Levels.Babylon.L07_Induction_sum_insert__arithmetic_sum
 msgid "Divide interval §0 into §1 and §2 by using §3"
 msgstr ""
 
@@ -4969,7 +4950,7 @@ msgstr ""
 msgid "And now disect §0"
 msgstr ""
 
-#: Game.Levels.Babylon.L09_Boss
+#: Game.Levels.Babylon.L10_Boss
 msgid "Conclusion Babylon L09"
 msgstr ""
 
@@ -4991,6 +4972,11 @@ msgstr ""
 #. §3: `specialize «{hp}» «{a}»`
 #: Game.Levels.Prado.L06_Prime_Specialize__prime_def
 msgid "Apply §0 onto §1. Try either §2 or §3"
+msgstr ""
+
+#. §0: `grind`
+#: Game.Levels.Mono.L02_InjectiveNeIff
+msgid "**Robo**: try §0?"
 msgstr ""
 
 #. §0: `revert`
@@ -5321,11 +5307,6 @@ msgstr ""
 msgid "Intro Vieta L08"
 msgstr ""
 
-#. §0: `decide`
-#: Game.Levels.Mono.L02_InjectiveNeIff
-msgid "Perhaps, try using §0 here"
-msgstr ""
-
 #. §0: `rw [ne_comm]`
 #. §1: `simp [ne_comm]`
 #: Game.Levels.Epo.L02_CurrySurjective
@@ -5543,19 +5524,13 @@ msgstr ""
 msgid "This looks good!"
 msgstr ""
 
-#. §0: `1 «{i}» «{x}»`
-#. §1: `Matrix.one_apply`
-#: Game.Levels.Robotswana.L05_EBasisDiagSum
-msgid "Apply definition §0 by §1"
-msgstr ""
-
 #. §0: $$ \\sum_{i = 0}^n i = \\tfrac{1}{2} \\cdot n \\cdot (n + 1) $$
 #. §1: `n`
 #. §2: `induction n with d hd`
 #. §3: `with …`
 #. §4: `d`
 #. §5: `hd`
-#: Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
+#: Game.Levels.Babylon.L07_Induction_sum_insert__arithmetic_sum
 msgid "To proof sum §0\n"
 "try to perform induction over §1 using §2. §3 is optional and you can\n"
 "decide on the name of your induction variable (§4) and hypothesis (§5)."
@@ -5604,12 +5579,6 @@ msgstr ""
 #: Game.Levels.Saturn.L04_mul_assoc
 msgid "Conclusion Saturn L04: coefficients were in §0. Polynomes with coefficients in §1\n"
 "are not considered rings. §2 does also work on half rings."
-msgstr ""
-
-#. §0: `simp`
-#. §1: `ring`
-#: Game.Levels.Babylon.L06_Induction_sum_insert__arithmetic_sum
-msgid "The rest is simple computation solvable by §0 and §1"
 msgstr ""
 
 #. §0: `Set A`
@@ -5823,6 +5792,10 @@ msgstr ""
 #. §0: `decide`
 #: Game.Levels.Piazza.L02_Simp
 msgid "Remember to use §0 here"
+msgstr ""
+
+#: Game.Levels.Babylon.L06_sum_eq_single
+msgid "Conclusion Babylon L06"
 msgstr ""
 
 #: Game.Levels.Luna.L01_Icc__Icc_insert_succ_right
