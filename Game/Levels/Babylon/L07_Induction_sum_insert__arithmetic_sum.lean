@@ -106,7 +106,9 @@ NewTactic induction
 
 /---/
 TheoremDoc Finset.sum_insert as "sum_insert" in "∑ Π"
-NewTheorem Finset.sum_insert
+/---/
+TheoremDoc Finset.insert_Icc_right_eq_Icc_add_one as "insert_Icc_right_eq_Icc_add_one" in "≤"
+NewTheorem Finset.sum_insert Finset.insert_Icc_right_eq_Icc_add_one
 
 -- Nat.zero_eq
 -- Nat.succ_eq_add_one

@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Piazza"
-Level 10
+Level 9
 
 Title ""
 
@@ -13,7 +13,7 @@ Introduction "
 Introduction "Intro Luna L09"
 
 open Finset
-Statement (a c : ℝ) (h : a ≠ c): ∃ b : ℝ, a < b ∧ b < c ∨ c < b ∧ b < a := by
+Statement (a c : ℝ) (h : a ≠ c) : ∃ b : ℝ, a < b ∧ b < c ∨ c < b ∧ b < a := by
   /-
   Hint "**Du**:
   Nun, es ist schon ziemlich klar, welches `b` man hier verwenden könnte.
@@ -31,7 +31,10 @@ Statement (a c : ℝ) (h : a ≠ c): ∃ b : ℝ, a < b ∧ b < c ∨ c < b ∧ 
   ```
   "
   use (a + c) / 2
+  Hint (hidden := true) "**Robo**: Try `grind`"
   grind
+
+NewTactic grind
 
 /-
 Conclusion "

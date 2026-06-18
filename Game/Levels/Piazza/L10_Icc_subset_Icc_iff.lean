@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Piazza"
-Level 11
+Level 10
 
 Title ""
 
@@ -38,5 +38,7 @@ a₁ ≤ b₁ →  (Icc a₁ b₁ ⊆ Icc a₂ b₂ ↔ a₂ ≤ a₁ ∧ b₁ �
   grind
 
 NewTheorem Set.subset_iff
+
+NewDefinition Finset.Icc
 
 Conclusion ""

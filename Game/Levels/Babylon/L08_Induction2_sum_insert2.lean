@@ -62,6 +62,10 @@ Statement  (n : ℕ) : ∑ i ∈ Icc (-n : ℤ) n, i = 0 := by
         · simp
       · grind
 
+/---/
+TheoremDoc Finset.insert_Icc_left_eq_Icc_sub_one as "insert_Icc_left_eq_Icc_sub_one" in "≤"
+NewTheorem Finset.insert_Icc_left_eq_Icc_sub_one
+
 TheoremTab "∑ Π"
 
 Conclusion ""
