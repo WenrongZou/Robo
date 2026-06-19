@@ -100,13 +100,9 @@ Statement  (n : ℕ) (hn : 3 ≤ n) : ∑ i ∈ Icc 0 n, (i^3 - 3 * i^2 + 2*i : 
     "
     -/
     Hint (hidden := true) "[Babylon] Split `{h}` with `obtain`: `obtain h | h | h  := {h}`"
-    obtain h | h | h  := h
-    · rw [h]
-      ring
-    · rw [h]
-      ring
-    · rw [h]
-      ring
+
+    /- Maybe here we can Hint try `grind`? -/
+    grind
 
 /---/
 TheoremDoc Finset.sum_subset as "sum_subset" in "∑ Π"

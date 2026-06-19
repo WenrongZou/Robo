@@ -23,6 +23,7 @@ definition (`NewDefinition`), or merely proves an existing mathlib lemma
 ## Decisions
 - Delete L03, since only practice `decide`.
 - Delete L08 and keep L09, since `tauto` can solve L08 and `grind` can not solve L09
+- Delete L06 since `ring` can solves it.
 
 ## Findings
 
