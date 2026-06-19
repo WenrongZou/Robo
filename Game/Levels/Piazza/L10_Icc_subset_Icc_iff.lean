@@ -37,7 +37,7 @@ a₁ ≤ b₁ →  (Icc a₁ b₁ ⊆ Icc a₂ b₂ ↔ a₂ ≤ a₁ ∧ b₁ �
   simp
   grind
 
-NewTheorem Set.subset_iff
+NewTheorem Finset.subset_iff
 
 NewDefinition Finset.Icc
 

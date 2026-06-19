@@ -134,17 +134,7 @@ Statement Matrix.ebasis_diag_sum_eq_one {n : ℕ} : ∑ i : Fin n, E i i = 1 := 
     -- · Hint "**Du**: Als erstes würde ich mal schauen, ob sich `{h₂}` vereinfacht."
     · Hint "Try to simplify `{h₂}`."
       simp at h₂
-      -- TODO : `tauto` already solves this.
-      /-
-      Hint "**Du**: Hmm, jetzt ist das erstmal verdreht.
-
-      **Robo**: Erinnere dich an `symm`!
-
-      **Du**: Richtig, das brauchten wir ja schon bei diesem wilden Typen mit seinen Förderbändern."
-      -/
-      Hint "Try `symm` to fix skewed order"
-      symm
-      assumption
+      tauto
     Branch
       simp [h₃]
     /-

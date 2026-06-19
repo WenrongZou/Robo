@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-18\n"
+"POT-Creation-Date: 2026-06-19\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: template\n"
@@ -182,7 +182,7 @@ msgid "Rewrite §0 as sum of basis elements"
 msgstr ""
 
 #. §0: `omega`
-#: Game.Levels.Piazza.L11_Icc_subset_Icc_iff
+#: Game.Levels.Piazza.L10_Icc_subset_Icc_iff
 msgid "Intro Luna L10: Use §0 again"
 msgstr ""
 
@@ -1162,10 +1162,6 @@ msgstr ""
 msgid "Intro Samarkand L01"
 msgstr ""
 
-#: Game
-msgid "[Game] CaptionShort"
-msgstr ""
-
 #. §0: `apply`
 #: Game.Levels.Implis.L05_Apply
 msgid "[Implis.L05] Hint 2: §0 different prop"
@@ -1175,6 +1171,10 @@ msgstr ""
 #. §1: `«{B}»`
 #: Game.Levels.Piazza.L07_antisymm_iff
 msgid "Try replacing §0 by §1"
+msgstr ""
+
+#: Game
+msgid "[Game] CaptionShort"
 msgstr ""
 
 #: Game.Levels.Implis.L11_Iff
@@ -1278,6 +1278,11 @@ msgstr ""
 
 #: Game.Levels.Piazza.L05_empty__eq_empty_iff_forall_notMem
 msgid "Intro Piazza L05"
+msgstr ""
+
+#. §0: `grind`
+#: Game.Levels.Piazza.L09_lt_trichotomy2
+msgid "**Robo**: Try §0"
 msgstr ""
 
 #: Game.Levels.Saturn.L04_mul_assoc
@@ -1437,17 +1442,6 @@ msgstr ""
 
 #: Game.Levels.Quantus.L06_PushNeg
 msgid "Conclusion Quantus L09"
-msgstr ""
-
-#. §0: `Icc`
-#. §1: `Icc a b`
-#. §2: $[a, b]$
-#. §3: $\\{a, a + 1, \\dots, b\\}$
-#. §4: $$ [a, b] ∪ \\{ b + 1 \\} = [a, b + 1] $$
-#: Game.Levels.Piazza.L09_Icc__Icc_insert_succ_right
-msgid "Remind that §0 is an interval which is closed to both sides. You could write §1\n"
-"as §2 or §3, because we are in the natual numbers. Therfore, the\n"
-"goal is: §4"
 msgstr ""
 
 #. §0: `«{f}»`
@@ -2053,7 +2047,7 @@ msgstr ""
 msgid "Intro Logo L04"
 msgstr ""
 
-#: Game.Levels.Piazza.L10_lt_trichotomy2
+#: Game.Levels.Piazza.L09_lt_trichotomy2
 msgid "Intro Luna L09"
 msgstr ""
 
@@ -2433,7 +2427,7 @@ msgstr ""
 #. §3: ```
 #. obtain h | h | h := lt_trichotomy a c
 #. ```
-#: Game.Levels.Piazza.L10_lt_trichotomy2
+#: Game.Levels.Piazza.L09_lt_trichotomy2
 msgid "It is clear which §0 can be used. Start with §1 and continue with §2 e.g.\n"
 "§3\n"
 ""
@@ -4954,7 +4948,6 @@ msgstr ""
 #. §0: `simp [E]`
 #: Game.Levels.Robotswana.L09_EvalOnEBasis
 #: Game.Levels.Robotswana.L09_EvalOnEBasis
-#: Game.Levels.Piazza.L09_Icc__Icc_insert_succ_right
 msgid "Try §0"
 msgstr ""
 
@@ -5612,7 +5605,7 @@ msgid "Deconstruct assumption by §0. The brackets can be written seperatly\n"
 "than §5 und §6 can be chosen as well e.g. §7"
 msgstr ""
 
-#: Game.Levels.Piazza.L10_lt_trichotomy2
+#: Game.Levels.Piazza.L09_lt_trichotomy2
 msgid "Conclusion Luna L09"
 msgstr ""
 
@@ -5790,10 +5783,6 @@ msgstr ""
 msgid "Conclusion Babylon L06"
 msgstr ""
 
-#: Game.Levels.Piazza.L09_Icc__Icc_insert_succ_right
-msgid "Intro Luna L06"
-msgstr ""
-
 #. §0: `contrapose`
 #: Game.Levels.Spinoza.L05_Contrapose
 msgid "Apply contraposition lemma simply by §0"
@@ -5874,7 +5863,7 @@ msgstr ""
 
 #. §0: `subset_iff`
 #. §1: `simp`
-#: Game.Levels.Piazza.L11_Icc_subset_Icc_iff
+#: Game.Levels.Piazza.L10_Icc_subset_Icc_iff
 msgid "Try using §0 and if nothing else helps, §1"
 msgstr ""
 
