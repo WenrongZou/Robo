@@ -47,8 +47,10 @@ CoverImage "images/Cover.png"
 
 /-! If you need to add manual dependencies in your planet graph, you can do so here: -/
 Dependency Quantus → Piazza -- because of `∀`
+Dependency Quantus → Cafe -- because of `ring`
 Dependency Prado → Mono     -- beclause of `∃!`
 Dependency Mono → Iso       -- because of `Injective`
+Dependency Cafe → Luna -- because of `grind`
 
 Dependency Robotswana → Ciao
 Dependency Cantor → Ciao
