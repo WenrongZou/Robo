@@ -1,4 +1,4 @@
-1. Babylon/L04: use `grind` to solve `Icc 3 n \sub Icc 0 n` and discuss three cases `i = 0 \or i = 1 \or i = 2`.
+1. (AllowFullGrind) Babylon/L04: use `grind` to solve `Icc 3 n \sub Icc 0 n` and discuss three cases `i = 0 \or i = 1 \or i = 2`.
 2. Babylon/L05: `grind [Odd.neg_pow]` closes the goal
   `∀ x ∈ I, x ∉ {i ∈ I | Even i} → (-1) ^ x + 1 = 0`.
   `grind [Even.neg_pow]` closes the goal
