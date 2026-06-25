@@ -33,7 +33,9 @@ Statement light_and_shade {f : ℝ → ℝ} {a b : ℝ} (hf : Continuous f) (hab
   Hint "Compare `f a` and `f b` by trichotomy: `obtain h | h | h := lt_trichotomy (f a) (f b)`."
   obtain h | h | h := lt_trichotomy (f a) (f b)
   · Hint "If `f a < f b`, then `b` witnesses that `a` is a shadow point, contradicting `ha`."
-    exact absurd ⟨b, hab, h⟩ ha
+    have a_mem : a ∈ Shade f := by
+      use b
+    contradiction
   · exact h
   · Hint "Now `f b < f a`. Use `exist_gt` to grab `c ∈ Ioo a b` with `f c > f b`."
     obtain ⟨c, hc_mem, hc_gt⟩ := exist_gt hf hab h
@@ -54,7 +56,8 @@ Statement light_and_shade {f : ℝ → ℝ} {a b : ℝ} (hf : Continuous f) (hab
     have hdb_lt : d < b := by
       rcases lt_or_eq_of_le hdb with h' | h'
       · exact h'
-      · exfalso; rw [h'] at fd_eq; linarith
+      · -- grind
+        exfalso; rw [h'] at fd_eq; linarith
     have h_lt : ∀ x ∈ Set.Ioo d b, f x ≤ f c := f_le_fc_right hne
     Hint "Show `d` is not a shadow point: any `t > d` with `f t > f d = f c` is impossible. Split on
     where `t` sits relative to `b` (use `h_lt`, the `t = b` case, and `not_mem_shade hb`)."
@@ -68,7 +71,8 @@ Statement light_and_shade {f : ℝ → ℝ} {a b : ℝ} (hf : Continuous f) (hab
         linarith
     Hint "But `d ∈ Ioo a b`, so `h₀ d` forces `d` to be a shadow point — contradiction."
     have d_mem : d ∈ Set.Ioo a b := ⟨lt_trans hc_mem.1 hcd, hdb_lt⟩
-    exact absurd (h₀ d d_mem) d_not_mem
+    obtain d_shade := h₀ _ d_mem
+    contradiction
 
 Conclusion "Conclusion LightAndShade L08: the boss is defeated — `f a = f b`. Planet complete!"
 
