@@ -28,9 +28,9 @@ Statement f_le_fc_right {f : ℝ → ℝ} {b c : ℝ}
   have hcd : c < d := by
     obtain ⟨x0, hx0⟩ := hne
     obtain h := (le_csSup hd hx0)
-    simp [shadeSet] at hx0
-    grind
-    -- exact lt_of_lt_of_le hx0.1.1 (le_csSup hd hx0)
+    grind [shadeSet]
+    -- simp [shadeSet] at hx0
+    -- grind
   intro x hx
   obtain ⟨hx1, hx2⟩ := hx
   Hint "Since `d < x`, `x` is past the supremum, so `x ∉ shadeSet f c b`. Use
@@ -39,7 +39,10 @@ Statement f_le_fc_right {f : ℝ → ℝ} {b c : ℝ}
   Hint "Suppose `f x > f c`. Together with `c < x < b` this would put `x` back into the set,
   contradicting `not_mem`."
   by_contra hcon
-  exact not_mem ⟨⟨lt_trans hcd hx1, hx2⟩, not_le.mp hcon⟩
+  have : x ∈ shadeSet f c b := by
+    simp [shadeSet]
+    grind
+  contradiction
 
 Conclusion "Conclusion LightAndShade L06: saved as `f_le_fc_right`."
 

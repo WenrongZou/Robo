@@ -1,4 +1,4 @@
-import Game.Levels_inactive.v2.LightAndShade_Test.L07_FsSupEqFc
+import Game.Levels_inactive.v2.LightAndShade_Test.L07_Lt_sSup_shadeSet
 
 World "LightAndShade"
 Level 8
@@ -37,42 +37,57 @@ Statement light_and_shade {f : ℝ → ℝ} {a b : ℝ} (hf : Continuous f) (hab
       use b
     contradiction
   · exact h
-  · Hint "Now `f b < f a`. Use `exist_gt` to grab `c ∈ Ioo a b` with `f c > f b`."
+  · /- Hint: Level 2, use lemma exist_gt. -/
     obtain ⟨c, hc_mem, hc_gt⟩ := exist_gt hf hab h
-    Hint "Since `c` lies between `a` and `b`, the assumption `h₀` makes it a shadow point."
+    /- Hint: by assumption h₀, we have that `c ∈ Shade f`. -/
     have hc_shade : c ∈ Shade f := h₀ c hc_mem
-    Hint "Feed this to `shadeSet_nonempty` to learn the set `shadeSet f c b` is nonempty."
+    /- Hint: Level 3, shadeSet is non empty. -/
     have hne : (shadeSet f c b).Nonempty := shadeSet_nonempty hb hc_gt hc_shade
     Hint "Name the supremum: `set d := sSup (shadeSet f c b) with hd_def`."
     set d := sSup (shadeSet f c b) with hd_def
+    /- Hint: Level 4, shadeSet is bounded above. -/
     have hbd : BddAbove (shadeSet f c b) := shadeSet_bddAbove f c b
-    Hint "Basic bounds: `c < d` (some set element sits below `d`) and `d ≤ b`."
-    have hcd : c < d := by
-      obtain ⟨x0, hx0⟩ := hne
-      exact lt_of_lt_of_le hx0.1.1 (le_csSup hbd hx0)
+    /- Make this as a seperate level to replace level 7. -/
+    obtain hcd := lt_sSup_shadeSet hb hc_gt hc_shade
     have hdb : d ≤ b := csSup_le hne (fun x hx => hx.1.2.le)
-    Hint "Level 7 pins the value at the supremum: `fsSup_eq_fc hf hc_gt hne` gives `f d = f c`."
-    have fd_eq : f d = f c := fsSup_eq_fc hf hc_gt hne
-    have hdb_lt : d < b := by
-      rcases lt_or_eq_of_le hdb with h' | h'
-      · exact h'
-      · -- grind
-        exfalso; rw [h'] at fd_eq; linarith
+    /- Level 5. -/
+    have fc_le : f c ≤ f d := fc_le_fsSup hf hne
+    /- Level 6. -/
     have h_lt : ∀ x ∈ Set.Ioo d b, f x ≤ f c := f_le_fc_right hne
-    Hint "Show `d` is not a shadow point: any `t > d` with `f t > f d = f c` is impossible. Split on
-    where `t` sits relative to `b` (use `h_lt`, the `t = b` case, and `not_mem_shade hb`)."
     have d_not_mem : d ∉ Shade f := by
-      rintro ⟨t, htd, htf⟩
-      rw [fd_eq] at htf
-      rcases lt_trichotomy t b with htb | htb | htb
-      · exact absurd (h_lt t ⟨htd, htb⟩) (not_le.mpr htf)
-      · rw [htb] at htf; linarith
+      intro h
+      obtain ⟨t, htd, htf⟩ := h
+      have htf' : f t > f c := by grind
+      obtain htb | htb | htb := lt_trichotomy t b
+      · grind
+      · grind
       · have := not_mem_shade hb t htb
-        linarith
-    Hint "But `d ∈ Ioo a b`, so `h₀ d` forces `d` to be a shadow point — contradiction."
-    have d_mem : d ∈ Set.Ioo a b := ⟨lt_trans hc_mem.1 hcd, hdb_lt⟩
+        grind
+    have d_mem : d ∈ Set.Ioo a b := by grind
     obtain d_shade := h₀ _ d_mem
     contradiction
+    -- Hint "Level 7 pins the value at the supremum: `fsSup_eq_fc hf hc_gt hne` gives `f d = f c`."
+    -- have fd_eq : f d = f c := fsSup_eq_fc hf hc_gt hne
+    -- have hdb_lt : d < b := by
+    --   rcases lt_or_eq_of_le hdb with h' | h'
+    --   · exact h'
+    --   · -- grind
+    --     exfalso; rw [h'] at fd_eq; linarith
+    -- have h_lt : ∀ x ∈ Set.Ioo d b, f x ≤ f c := f_le_fc_right hne
+    -- Hint "Show `d` is not a shadow point: any `t > d` with `f t > f d = f c` is impossible. Split on
+    -- where `t` sits relative to `b` (use `h_lt`, the `t = b` case, and `not_mem_shade hb`)."
+    -- have d_not_mem : d ∉ Shade f := by
+    --   rintro ⟨t, htd, htf⟩
+    --   rw [fd_eq] at htf
+    --   rcases lt_trichotomy t b with htb | htb | htb
+    --   · exact absurd (h_lt t ⟨htd, htb⟩) (not_le.mpr htf)
+    --   · rw [htb] at htf; linarith
+    --   · have := not_mem_shade hb t htb
+    --     linarith
+    -- Hint "But `d ∈ Ioo a b`, so `h₀ d` forces `d` to be a shadow point — contradiction."
+    -- have d_mem : d ∈ Set.Ioo a b := ⟨lt_trans hc_mem.1 hcd, hdb_lt⟩
+    -- obtain d_shade := h₀ _ d_mem
+    -- contradiction
 
 Conclusion "Conclusion LightAndShade L08: the boss is defeated — `f a = f b`. Planet complete!"
 

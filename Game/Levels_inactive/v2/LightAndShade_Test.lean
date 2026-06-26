@@ -4,7 +4,7 @@ import Game.Levels_inactive.v2.LightAndShade_Test.L03_ShadeSetNonempty
 import Game.Levels_inactive.v2.LightAndShade_Test.L04_ShadeSetBddAbove
 import Game.Levels_inactive.v2.LightAndShade_Test.L05_FcLeFsSup
 import Game.Levels_inactive.v2.LightAndShade_Test.L06_FLeFcRight
-import Game.Levels_inactive.v2.LightAndShade_Test.L07_FsSupEqFc
+import Game.Levels_inactive.v2.LightAndShade_Test.L07_Lt_sSup_shadeSet
 import Game.Levels_inactive.v2.LightAndShade_Test.L08_LightAndShade
 
 /-!
