@@ -37,10 +37,14 @@ Statement light_and_shade {f : ℝ → ℝ} {a b : ℝ} (hf : Continuous f) (hab
       use b
     contradiction
   · exact h
-  · /- Hint: Level 2, use lemma exist_gt. -/
+  · /- Hint: Level 2, use lemma exist_gt.
+      have : ∃ ..
+      obtain ⟨⟩ := this -/
     obtain ⟨c, hc_mem, hc_gt⟩ := exist_gt hf hab h
     /- Hint: by assumption h₀, we have that `c ∈ Shade f`. -/
-    have hc_shade : c ∈ Shade f := h₀ c hc_mem
+    have hc_shade : c ∈ Shade f := by
+      apply h₀
+      assumption
     /- Hint: Level 3, shadeSet is non empty. -/
     have hne : (shadeSet f c b).Nonempty := shadeSet_nonempty hb hc_gt hc_shade
     Hint "Name the supremum: `set d := sSup (shadeSet f c b) with hd_def`."
