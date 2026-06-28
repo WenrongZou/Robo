@@ -12,6 +12,8 @@ import Game.Levels.Babylon
 import Game.Levels.Cantor
 import Game.Levels.Robotswana
 
+import Game.Levels.Shade
+
 import Game.Levels.Ciao
 
 import Game.Levels.Prado
