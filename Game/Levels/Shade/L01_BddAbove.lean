@@ -9,6 +9,7 @@ Statement {a b : ℝ} {p : ℝ → Prop} :
     BddAbove {x ∈ Ioo a b | p x} := by
   Hint "[Hint bdad] `rw` theorem `bddAbove_def` to translate the problem. "
   rw [bddAbove_def]
+  Hint (hidden := true) "[Hint hd] `b` is a upper bound of this set. "
   use b
   grind
 
