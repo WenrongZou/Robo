@@ -7,9 +7,9 @@ open Set
 
 Statement {a b : ℝ} {p : ℝ → Prop} :
     BddAbove {x ∈ Ioo a b | p x} := by
-  apply bddAbove_def.mp
+  Hint "[Hint bdad] `rw` theorem `bddAbove_def` to translate the problem. "
+  rw [bddAbove_def]
   use b
-  simp [upperBounds]
   grind
 
 /-- -/
