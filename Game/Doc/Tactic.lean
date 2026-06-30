@@ -598,3 +598,11 @@ The tactic `tauto` proves logical tautologies.
 Sometimes the proof target must first be abstracted with `generalize` so that `tauto` recognizes the tautology.
 -/
 TacticDoc tauto
+
+/--
+The tactic `fun_prop` automatically proves "function properties" such as `Continuous f`,
+`Differentiable f`, or `Measurable f`. It decomposes the function into the standard
+operations (composition, addition, multiplication, …) and applies the known lemmas about
+how each property is preserved by those operations.
+-/
+TacticDoc fun_prop
