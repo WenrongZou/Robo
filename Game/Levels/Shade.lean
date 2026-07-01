@@ -8,6 +8,7 @@ import Game.Levels.Shade.L07_InterValue
 import Game.Levels.Shade.L08_ShadeDef
 import Game.Levels.Shade.L09_ShadeSetNonempty
 import Game.Levels.Shade.L10_ShadeSetBddAbove
+import Game.Levels.Shade.L11_Boss
 
 /-!
 The planet `Shade` is about the supremum `sSup` of a set of reals: being bounded
