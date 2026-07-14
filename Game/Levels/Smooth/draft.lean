@@ -36,3 +36,27 @@ theorem iteratedDeriv_expNegInvGlue (n : ℕ) :
 theorem iteratedDeriv_f_zero (n : ℕ) : iteratedDeriv n f 0 = 0 := by
   rw [f_eq_expNegInvGlue, iteratedDeriv_expNegInvGlue]
   simp [expNegInvGlue.zero]
+
+section
+
+open expNegInvGlue
+
+lemma hasDerivAt_polynomial_eval_inv_mul' (p : ℝ[X]) (x : ℝ) :
+    HasDerivAt (fun x ↦ p.eval x⁻¹ * expNegInvGlue x)
+      ((X ^ 2 * (p - derivative (R := ℝ) p)).eval x⁻¹ * expNegInvGlue x) x := by
+  rcases lt_trichotomy x 0 with hx | rfl | hx
+  · rw [zero_of_nonpos hx.le, mul_zero]
+    refine (hasDerivAt_const _ 0).congr_of_eventuallyEq ?_
+    filter_upwards [gt_mem_nhds hx] with y hy
+    rw [zero_of_nonpos hy.le, mul_zero]
+  · rw [expNegInvGlue.zero, mul_zero, hasDerivAt_iff_tendsto_slope]
+    refine ((tendsto_polynomial_inv_mul_zero (p * X)).mono_left inf_le_left).congr fun x ↦ ?_
+    simp_log [slope_def_field, div_eq_mul_inv, mul_right_comm]
+  · have := ((p.hasDerivAt x⁻¹).mul (hasDerivAt_neg _).exp).comp x (hasDerivAt_inv hx.ne')
+    convert! this.congr_of_eventuallyEq _ using 1
+    · simp_log [expNegInvGlue, hx.not_ge]
+      ring
+    · filter_upwards [lt_mem_nhds hx] with y hy
+      simp_log [expNegInvGlue, hy.not_ge]
+
+end
