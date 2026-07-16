@@ -56,6 +56,8 @@ Dependency Quantus → Piazza -- because of `∀`
 Dependency Prado → Mono     -- beclause of `∃!`
 Dependency Mono → Iso       -- because of `Injective`
 
+Dependency Vieta → Cartan   -- because of `function`
+
 Dependency Robotswana → Ciao
 Dependency Cantor → Ciao
 Dependency Samarkand → Ciao
