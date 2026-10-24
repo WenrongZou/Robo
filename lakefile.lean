@@ -23,7 +23,9 @@ Deactivate local version with `lake update -R`.
 def RemoteGameServer : Dependency := {
   name := `GameServer
   scope := "hhu-adam"
-  src? := DependencySrc.git "https://github.com/leanprover-community/lean4game.git" leanVersion "server"
+  -- TEMPORARY: pin lean4game main (contains `LevelScope`, #539) instead of the `v4.31.0` tag
+  src? := DependencySrc.git "https://github.com/leanprover-community/lean4game.git"
+    "c47f34ab9105a2c62a63fb0f4b9bcd94a697bdae" "server"
   version? := none
   opts := ∅
 }
