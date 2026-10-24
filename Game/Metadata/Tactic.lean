@@ -5,5 +5,4 @@ import Game.Metadata.Tactic.Induction
 import Game.Metadata.Tactic.Ring
 import Game.Metadata.Tactic.SimpLog
 import Game.Metadata.Tactic.Simp
--- import Game.Metadata.Tactic.Grind  -- unused: scoped opt-out does not work in live lean4game
-import Game.Metadata.Tactic.GrindMode
+import Game.Metadata.Tactic.Grind

@@ -3,12 +3,12 @@ import Game.Metadata
 World "Slope"
 Level 8
 
-open Topology Filter
+open Topology Filter FullGrind
 
 /---/
 TheoremDoc Filter.Tendsto.mono_left as "Tendsto.mono_left" in "Function"
 
-Statement (preamble := grind_mode 1) :
+Statement :
     Tendsto (fun (x : ℝ) ↦ |x|) (𝓝[≠] 0) (𝓝 0) := by
   Hint "[Hint monolft] You already proved this limit along `𝓝 0`. State that
     with `have h : Tendsto (fun (x : ℝ) => |x|) (𝓝 0) (𝓝 0)`; then

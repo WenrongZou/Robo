@@ -7,9 +7,9 @@ Title ""
 
 Introduction ""
 
-open Finset Nat
+open Finset Nat FullGrind
 
-Statement (preamble := grind_mode 1) (I : Finset ℕ) : ∑ i ∈ I, ((-1 : ℤ)^i + 1) = 2*card { i ∈ I | Even i} := by
+Statement  (I : Finset ℕ) : ∑ i ∈ I, ((-1 : ℤ)^i + 1) = 2*card { i ∈ I | Even i} := by
   /-
   Hint "
     **Du**:  Hier ist jetzt zu zeigen, dass
